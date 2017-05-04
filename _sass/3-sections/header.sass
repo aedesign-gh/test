@@ -1,0 +1,190 @@
+#header
+   z-index: 100
+   box-shadow: 0px 0px 3px 1px rgba(black, .1)
+   border-bottom: 1px solid $border-color-light
+   background-color: white
+   +position(relative)
+   
+   
+   .header-container
+      @extend .container
+      padding: .5rem 1rem 0px
+      overflow: visible
+      +display(block)
+      
+      .site-brand
+         margin: .5rem auto
+         width: 160px
+         min-width: 80px
+         +display(block)
+         padding-bottom: .5rem
+         
+         img
+            +size(100% auto)
+            
+      .text
+         text-align: center
+         
+         .contact          
+            height: 45%
+            @extend .vertical-align
+            
+            .globe
+               +display(none)
+                  
+            .smart
+               +display(none)
+            
+            span
+               padding: 0px .5rem
+               border-left: 1px solid #e6ba47
+               @extend .smaller
+               
+               &:first-of-type
+                  border: 0px
+            
+         .nav     
+            height: 55%
+            +clearfix()
+            
+            ul
+               margin: 0px
+               padding: 0px
+               list-style-type: none
+               
+               li
+                  +display(inline-block)
+                  text-transform: capitalize
+                     
+            .nav-menu      
+               float: none
+               
+               .home
+                  +display(none)
+               
+               .nav-item
+                  padding: 0px .8rem
+                  cursor: pointer
+               
+                  > a
+                     +display(block)
+                     padding: .25rem 0px
+                     border:
+                        width: 3px 0px
+                        style: solid
+                        color: transparent
+                     font-size: 1.1rem
+                     
+                     &.current
+                        border-bottom-color: #e6ba47
+                        
+               .services ul
+                  +display(none)
+                        
+@media screen and (min-width: 500px)
+   #header
+      .header-container
+         .text
+            .contact                            
+               .smart
+                  +display(inline)
+                           
+@media screen and (min-width: 768px)
+   #header
+      .header-container
+         +display(flex)
+
+         .site-brand
+            margin: 0px 1rem 0px 0px
+            width: 220px
+
+         .text
+            +flex-grow(1)
+
+            .contact          
+               text-align: left
+
+               span
+                  &:first-of-type
+                     padding-left: 0px
+
+            .nav     
+               +clearfix()
+               border-top: 1px solid #e6ba47
+
+               .nav-menu      
+                  float: right
+                  
+                  .home
+                     +display(inline-block)
+
+                  .nav-item                  
+                     &:last-of-type
+                        padding-right: 1rem
+                     
+                     > a
+                        &:hover
+                           color: $color-alt-light
+
+                  > .services
+                     +position(relative)
+
+                     &:before
+                        content: ''
+                        +position(absolute, 0px 0px -20px 20px)
+                        z-index: -1
+
+                     &:after
+                        content: ''
+                        +position(absolute, 0px 2px null null)
+                        +size(7px 100%)
+                        +transition(all .2s ease-in-out 0s)
+                        background:
+                           image: url('../img/down.png')
+                           position: center center
+                           repeat: no-repeat
+                           size: 100%
+
+                     ul
+                        +display(none)
+                        text-align: left
+                        +position(absolute, 110% null null null)
+                        border: 1px solid $border-color-light
+                        background-color: $color-main
+                        width: 150px
+                        border-bottom: 1px solid $border-color-light                     
+
+                        li
+                           +display(block)
+                           padding: .2rem .7rem
+
+                           &:hover
+                              background-color: $border-color-lighter
+                           
+                     &:hover
+                        &:after
+                           +transform(rotateX(180deg))
+
+                        ul
+                           +display(block)
+                           
+@media screen and (min-width: 992px)
+   #header
+      .header-container
+         .text
+            .contact          
+               .globe
+                  +display(inline)
+                     
+            .nav     
+               .nav-menu      
+                  .nav-item
+                     padding: 0px 1.3rem
+                     
+                     > a
+                        padding: .42rem 0px
+                           
+                  .services:after
+                     right: 9px
+                     
+                     

@@ -1,0 +1,99 @@
+.contact-us
+   .social
+      margin: 1rem 0px 1.5rem
+
+   .map
+      margin: 1.5rem 0px .5rem
+      +display(block)
+      width: 100%
+      height: 385px
+      border: 1px solid $border-color-light
+      padding: .4rem
+      
+   .wrapper-text-form    
+      .text p:last-of-type
+         margin-bottom: 0px
+         
+      .form    
+         margin-top: 1.5rem
+         width: 100%     
+         
+         p
+            font-size: 1.4rem
+         
+         .form-contact          
+            fieldset
+               border: 0px
+               margin: 0px
+               padding: 0px                  
+
+               input:focus, textarea:focus
+                  outline: none
+               
+               label
+                  +display(block)
+                     
+                  [type='submit']
+                     text-transform: uppercase
+                     +size(100% auto)
+                     padding: .2rem
+                     border: 1px solid $border-color
+                     background-color: lighten($border-color-lighter, 2)
+                     
+                     &:hover
+                        background-color: darken($border-color-lighter, 2)
+               
+               .info
+                  border: 1px solid $border-color
+                  padding: .3rem .3rem .2rem
+                  margin-bottom: 1rem
+                  +clearfix()
+                     
+                  > *
+                     line-height: 1.7
+                     float: left
+
+                  input
+                     border: 0px
+                     padding: 0px .5rem
+                     width: 200px
+                     
+                  span
+                     width: 55px
+                     text-align: center
+                     border-right: 1px solid $border-color-light
+                     
+               .message        
+                  > * 
+                     width: 100%
+                  
+                  span
+                     border: 0px
+                  
+                  textarea
+                     height: 5rem
+                     border: 1px solid $border-color
+                     resize: none
+                     padding: .3rem
+                        
+@media screen and (min-width: 768px)
+   .contact-us
+      .wrapper-text-form
+         +clearfix
+
+         .text
+            float: left
+
+         .form    
+            float: right
+            width: 50%
+            margin-top: 0px
+            
+            .form-contact
+               max-width: 400px
+               
+               fieldset
+                  .message        
+                     textarea
+                        height: 8.5rem
+                        

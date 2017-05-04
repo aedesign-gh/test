@@ -1,0 +1,39 @@
+#services
+   border: 0px
+   
+   .services-container
+      @extend .container
+      text-align: center
+      
+      .sec-title
+         text-transform: initial
+         margin-bottom: 3rem
+         +transition(all .5s ease-out 0s)
+         
+         h2
+            color: $color-alt-light
+            margin-bottom: 0px
+            
+         p
+            margin-bottom: .8rem
+         
+      .article-wrapper
+         .article
+            opacity: 1
+            +transform(none)
+            +transition-duration(.5s)
+            +transition-timing-function(ease-out)
+            @for $i from 1 through 3
+               &:nth-child(#{$i})
+                  +transition-delay(.2s + (.1s * $i))
+                  
+   &.services-animate .services-container
+      .sec-title
+         opacity: 0
+      
+      .article-wrapper > .article
+         opacity: 0
+         +transform(translateY(100px))
+
+               
+      

@@ -1,0 +1,115 @@
+#slider
+   +position(relative)
+      
+   &:hover
+      .ctrl-prev, .ctrl-next
+         opacity: 1
+         +transform(none)
+      
+   .ctrl-prev, .ctrl-next
+      +position(absolute, null null .7rem null)
+      z-index: 5
+      cursor: pointer
+      opacity: 0
+      border-radius: 1px
+      +transition-duration(.5s)
+      +size(.9rem)
+      background-color: $color-main
+      
+      &:before
+         content: ''
+         +size(100%)
+         background-color: $color-alt-light
+         +position(absolute, 0px 0px 0px 0px)
+         +transition(all .1s ease-out 0s)
+         opacity: 0
+         
+      &:hover:before
+         opacity: 1
+      
+   .ctrl-prev
+      left: .7rem
+      +transform(translateX(-30px))
+      
+   .ctrl-next
+      +transform(translateX(30px))
+      right: .7rem
+   
+   .slide-container
+      +position(relative)
+      +size(100% 540px)   
+      
+      .slide-item
+         +position(absolute, 0px null null 0px)
+         +size(100%)
+         +display(block)
+         opacity: 0
+         z-index: 1
+         +transition(.8s)
+         background:
+            position: center center
+            size: cover
+            repeat: no-repeat    
+            
+         &.active-slide
+            opacity: 1
+            z-index: 2
+            +display(block)           
+               
+         .slide-wrapper
+            @extend .container
+            padding-top: 6rem
+            height: 100%
+            color: white
+            +display(flex)
+            +justify-content(space-between)   
+               
+            .text
+               margin-top: 1rem
+               text-align: center
+               width: 100%
+               
+               .big-title
+                  color: $color-main
+                  margin-bottom: 1.5rem
+                  
+               .sub-items 
+                  margin: 0px -.5rem 1rem
+                  
+                  span
+                     color: $color-main
+                     +display(inline-block)
+                     margin: 0px .5rem
+
+               .cta
+                  @extend .bigger
+                  margin-top: .8rem
+                  background-color: rgba(#000, .4)
+                     
+                           
+   .thumb-container
+      +position(absolute, null null .4rem 50%)
+      +size(204px auto)
+      margin-left: -102px
+      z-index: 2
+      
+      .thumb-item
+         +size(29% 4px)
+         float: left
+         margin-right: 6%
+         +transition(all .2s ease-out 0s)
+         border:
+            width: 4px 0px 4px
+            style: solid
+            color: transparent transparent $color-main
+            
+         &:hover
+            border-bottom-color: $color-alt-light
+            
+         &:last-of-type
+            margin-right: 0px
+         
+         &.active-thumb
+            pointer-events: none
+            height: 8px
+            border-color: $color-alt-light    

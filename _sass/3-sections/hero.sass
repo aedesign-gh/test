@@ -1,0 +1,84 @@
+.hero            
+   .hero-container
+      @extend .container
+      text-align: center
+      
+      img
+         +size(185px auto)
+         margin-bottom: 2.5rem
+         
+      h1
+         +display(none)
+         
+      p
+         font-size: 1.2rem
+         color: $text-color
+         margin: 0px auto 2rem
+         max-width: 850px
+   
+   &.homepage-hero       
+      +position(relative)
+      max-height: 100%
+      background:
+         image: url('../img/hero-bg.jpg')
+         position: center center
+         repeat: no-repeat
+         size: cover
+         attachment: fixed
+   
+      &:after
+         content: ''
+         +position(absolute, 0px 0px 0px 0px)
+         background-color: rgba(#060417, 0)
+   
+      .hero-container
+         padding-top: 6rem
+         padding-bottom: 6rem
+         z-index: 2
+         
+         img
+            +display(none)
+         
+         h1
+            opacity: 1
+            color: $color-main
+            @extend .gigantic
+            +display(block)
+            margin-bottom: 2.5rem
+            +transform(none)
+            +transition(all .5s ease-out 0s)
+
+         p
+            color: $color-main
+            opacity: 1
+            +transform(none)
+            +transition(all .5s ease-out .3s)
+
+         .social .social-item
+            opacity: 1
+            +transform(none)
+            +transition(transform .2s ease-out 0s, opacity .1s ease-out 0s)
+            @for $i from 1 through 3
+               &:nth-child(#{$i})
+                  +transition-delay(.5s + (.15s * $i))
+            
+            svg
+               fill: $color-main
+         
+   &.homepage-hero.hero-animate .hero-container
+      h1
+         opacity: 0
+         +transform(scale(.8))
+
+      p
+         opacity: 0
+         +transform(translateY(70px))
+
+      .social .social-item
+         opacity: 0
+         +transform(scale(.8))
+               
+@media screen and (min-width: 768px)
+   .hero .hero-container
+      img
+         width: 210px

@@ -1,0 +1,42 @@
+// NSO LIST PAGE
+.nso
+   z-index: 1
+   +position(relative)
+      
+   .body      
+      a
+         +display(inline-block)
+         width: 100%
+         padding: 2rem  1rem
+         font-size: 2rem
+         text-align: center
+         border: 1px solid $border-color-light
+         margin-bottom: 1rem
+         
+         &:hover
+            border-color: #e6ba47
+         
+         &:last-of-type
+            margin-bottom: 0px
+      
+@media screen and (min-width: 768px)
+   .nso
+      .body
+         margin: 0px -1rem -1rem
+         
+         a
+            width: 44.5%
+            margin: 1rem
+                     
+@media screen and (min-width: 992px)
+   .nso
+      .body
+         a
+            width: 46%
+                     
+@media screen and (min-width: 1200px)
+   .nso
+      .body
+         a
+            width: 46.75%
+   

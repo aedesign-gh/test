@@ -1,0 +1,19 @@
+.page-support
+   .page-container
+      @extend .container
+      background-color: $color-main
+      
+      .main
+         background-image: none
+         +position(relative)
+         z-index: 1
+         width: 100%
+               
+   @media screen and (min-width: 768px)
+      .page-container
+         +clearfix
+
+         .main
+            margin-bottom: 0px
+            padding-bottom: 0px
+            border-bottom: 0px    

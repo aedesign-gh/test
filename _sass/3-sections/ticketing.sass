@@ -1,0 +1,29 @@
+#ticketing      
+   .ticketing-container
+      @extend .container
+      text-align: center    
+            
+      h2
+         color: $color-alt-light
+         margin-bottom: 3rem
+         padding: 0px 1rem
+         opacity: 1
+         +transition(all .5s ease-out 0s)
+            
+      .ticketing-articles            
+         .article
+            opacity: 1
+            +transform(none)
+            +transition-duration(.5s)
+            +transition-timing-function(ease-out)
+            @for $i from 1 through 3
+               &:nth-child(#{$i})
+                  +transition-delay(.2s + (.1s * $i))
+                  
+   &.ticketing-animate .ticketing-container
+      h2
+         opacity: 0
+      
+      .ticketing-articles > .article
+         opacity: 0
+         +transform(translateY(100px))

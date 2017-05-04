@@ -1,0 +1,475 @@
+/*---------------------------*/
+/* Style for class site-main */
+/*---------------------------*/
+#site-main
+   overflow: hidden
+   +position(relative)
+   +display(flex)
+   +flex-direction(column)
+   background-color: $color-main
+      
+   > *      
+      overflow: hidden
+      border-bottom: 1px solid $border-color
+
+/*---------------------------*/
+/* Style for class container */
+/*---------------------------*/
+.container
+   +position(relative)
+   width: 100%
+   overflow: hidden
+   padding: 4rem 1rem
+   margin-left: auto
+   margin-right: auto     
+   
+   @media screen and (min-width: 768px)
+      max-width: 750px
+
+   @media screen and (min-width: 992px)
+      max-width: 980px   
+
+   @media screen and (min-width: 1200px)
+      max-width: 1170px
+   
+.title
+   +position(relative)
+   +display(block)
+   margin-bottom: 1rem
+   text-transform: capitalize
+
+   &:before
+      content: ''
+      background-color: $color-alt-light
+      +size(1.389rem 2px)
+      +position(absolute, -.3rem null null 0px)
+         
+.big-title
+   +display(inline-block)
+   +position(relative)
+   text-transform: uppercase
+   font-weight: 400
+   margin-bottom: 1.5rem
+   
+   &:before
+      content: ''
+      background-color: $color-alt-light
+      +size(2.778rem 4px)
+      +position(absolute, -.5rem null null 0px)
+   
+   @media screen and (min-width: 550px)
+      margin-bottom: 2rem
+      
+.social-share
+   +position(fixed, null 0px 0px 0px)
+   +clearfix()
+   z-index: 1000
+   
+   > a
+      +display(block)
+      +size(25% 45px)
+      float: left
+      white-space: nowrap
+      text-align: center
+      padding-right: 4px
+      +transition(all .2s ease-in-out 0s)
+      
+      &:before
+         content: ''
+         height: 100%
+         +display(inline-block)
+         vertical-align: middle
+      
+      svg
+         fill: $color-main
+         vertical-align: middle
+         +size(20px)
+   
+   .mail
+      background-color: #669c41
+      
+   .fb
+      background-color: #3c5b9b
+      
+   .google
+      background-color: #f63e28
+      
+   .twit
+      background-color: #2daae1
+      
+   @media screen and (min-width: 860px)
+      +position(fixed, 50% initial initial 0px)
+      margin-top: -100px
+
+      > a
+         +size(45px 50px)
+         float: none
+
+         &:hover
+            width: 60px   
+         
+.vertical-align
+   white-space: nowrap
+   text-align: center
+   
+   &:before
+      content: ''
+      height: 100%
+      vertical-align: middle
+      +display(inline-block)
+     
+.svg
+   @extend .bigger
+   +display(block)
+   margin-bottom: .5rem
+   text-transform: uppercase
+
+   svg
+      +size(1.111rem 1.167rem)
+      fill: $color-alt-light
+            
+.cta
+   padding: .5rem 1.2rem
+   +display(inline-block)
+   border: 2px solid $color-alt-light
+   background-color: $color-alt-light
+   text-transform: uppercase
+   color: $color-main !important
+   margin: 1rem 0px 0px
+   cursor: pointer
+   text-align: center
+   +transition(all .1s ease-out 0s)
+      
+   &:hover
+      border-color: $cta-color-hover
+      background-color: $cta-color-hover
+   
+.steps
+   h4
+      color: $color-alt-light
+      margin: 1.7rem 0px .4rem
+   p
+      margin: .5rem 0px 0px
+
+      a
+         color: $color-alt-light
+         +display(inline-block)
+         line-height: 1
+         border-bottom: 1px dotted $color-alt-light
+
+   .note
+      color: $color-main
+      padding: .4rem .7rem .2rem
+      border-radius: 3px
+      +display(inline-block)
+      background-color: $border-color-alt
+
+   hr
+      border: 0px
+      border-top: 1px solid $border-color-light
+      margin: 1.5rem 0px 1rem
+                  
+.note
+   padding: .5rem 0px
+   margin: .5rem 0px
+   +display(block)
+   color: $color-alt-light
+   @extend .smaller
+
+   &.strong
+      padding: .5rem .7rem
+      border: 1px solid $border-color-alt
+      border-left-width: 3px
+      color: $text-color
+
+   &.stronger
+      padding: .5rem .7rem
+      font-weight: normal
+      border: 1px solid #ff4040
+      border-left-width: 3px
+      color: $text-color
+                  
+.article-wrapper         
+   margin-bottom: -5rem
+   
+   .article
+      text-align: center
+      max-width: 300px
+      margin: 0px auto 5rem
+
+      .img
+         @extend .vertical-align
+         +size(100% auto)
+         margin-bottom: 1.5rem
+
+         img
+            vertical-align: bottom
+            +size(100% auto)
+
+      h4
+         margin-bottom: .7rem
+
+      .see-more
+         @extend .cta
+         padding: .2rem .8rem .1rem
+         text-transform: capitalize
+         color: $color-main
+               
+   @media screen and (min-width: 768px)
+      +clearfix()
+      margin: 0px
+      
+      .article
+         float: left
+         margin: 0px 2rem
+         width: 285px
+
+         .img
+            height: 200px
+               
+   @media screen and (min-width: 992px)
+      margin: 0px -1.2rem
+
+      .article
+         margin: 0px 1.2rem
+               
+   @media screen and (min-width: 1200px)
+      margin: 0px
+
+      .article
+         margin: 0px 2.5rem    
+         
+.tours-and-travel-articles
+   margin-bottom: -2rem
+
+   .article
+      text-align: center
+      margin: 0px auto 2rem
+      padding: .4rem .4rem 1.1rem
+      border: 1px solid $border-color
+      max-width: 342px
+
+      .img
+         +size(100% auto)
+         margin-bottom: 1.3rem
+         overflow: hidden
+         border: 1px solid $border-color-light
+
+         img
+            +display(block)
+            vertical-align: bottom
+            +size(100% auto)
+
+      h4
+         margin-bottom: .6rem
+         text-transform: capitalize
+
+      .see-more
+         @extend .cta
+         margin-top: .3rem
+         padding: .2rem .8rem .1rem
+         text-transform: capitalize
+         color: $color-main
+               
+   @media screen and (min-width: 768px)
+      +clearfix()
+      margin: 0px -1rem -1.8rem
+      
+      .article
+         float: left
+         margin: 0px 1rem 1.8rem
+         width: 321px
+         
+         .img
+            max-height: 237px
+               
+   @media screen and (min-width: 992px)
+      margin: 0px 0px -1.8rem
+
+      .article
+         width: 278px
+         
+         .img
+            max-height: 204px
+         
+   @media screen and (min-width: 1200px)      
+      .article         
+         width: 342px
+      
+         .img
+            max-height: 254px
+
+            
+.ticketing-articles            
+   .article
+      padding: 1.5rem 
+      border: 1px solid $border-color
+      max-width: 300px
+      margin: 0px auto 2.5rem
+      text-align: center
+
+      &:last-of-type
+         margin-bottom: 0px
+
+      &.twogo-travel h4
+         color: #ec078d
+
+      &.oceanjet h4
+         color: #dc1f25
+
+      &.supercat h4
+         color: #f0027f
+
+      h4
+         margin-top: -2.2rem
+         margin-bottom: .5rem
+         text-transform: capitalize
+
+         span              
+            padding: 0px .8rem
+            background-color: $color-main
+
+      .img
+         @extend .vertical-align
+         padding: .5rem 0px 1.2rem
+         height: 95px
+
+         img
+            vertical-align: middle
+            max-height: 60px
+            max-width: 80%
+
+      p
+         text-transform: capitalize
+         margin-bottom: 1rem
+
+         &.accom span, &.ameni span
+            &:after
+               content: ', '
+
+            &:last-of-type:after
+               content: ''
+
+         &.route span
+            text-transform: capitalize
+            +display(inline-block)
+            min-width: 90px
+
+      .see-more
+         @extend .cta
+         padding: .2rem .8rem .1rem
+         text-transform: capitalize
+         color: $color-main
+      
+   @media screen and (min-width: 768px)
+      +display(flex)
+      +justify-content(space-around)
+
+      .article
+         padding: 1.5rem 1.7rem
+         +flex(0 0 215px)
+         margin: 0px
+      
+   @media screen and (min-width: 992px)
+      .article
+         padding: 1.5rem 1rem
+         +flex-basis(275px)
+
+         p.ameni span:nth-child(5)
+            +display(none)
+      
+   @media screen and (min-width: 1200px)
+      .article
+         +flex-basis(315px)
+
+         p
+            &.route span
+               +display(inline-block)
+               width: 35%
+
+            &.ameni span:nth-child(5)
+               +display(inline)
+         
+.lightbox-trig
+   +position(relative)
+   cursor: pointer
+   z-index: 1
+
+   &:after
+      content: ''
+      opacity: 1
+      z-index: 1000
+      +position(absolute, 0px 0px 0px 0px)
+      background-color: rgba(black, .2)
+      +transition(all .1s ease-out 0s)
+
+   img
+      +display(block)
+      +size(100% auto)
+      min-height: 100%
+
+   &:hover:after
+      opacity: 0
+      
+
+      
+.img-lightbox
+   +position(fixed, 0px 0px 0px 0px)
+   background-color: rgba(black, .4)
+   z-index: 10000
+   text-align: center
+   padding: 1rem
+   @extend .vertical-align
+   
+   .lb-container
+      +display(inline-block)
+      vertical-align: middle
+      text-align: left
+      padding: 1px
+      max-width: 800px
+      +position(relative)
+         
+      .close-lb
+         +position(absolute, -24px 0px null null)
+         +size(25px)
+         border-radius: 2px
+         cursor: pointer
+         z-index: 1
+         
+         &:before
+            content: ''
+            +size(80% 2px)
+            background-color: $color-main
+            +position(absolute, 43% null null 10%)
+            +transform(rotate(45deg))
+            z-index: -1
+            +transition(.2s)
+            
+         &:after
+            content: ''
+            +size(80% 2px)
+            background-color: $color-main
+            +position(absolute, 43% null null 10%)
+            +transform(rotate(-45deg))
+            z-index: -1
+            +transition(.2s)
+            
+         &:hover
+            &:before
+               +transform(rotate(135deg))         
+            &:after
+               +transform(rotate(45deg))
+      
+      .lb-name
+         color: $color-main
+         margin: 0px
+         text-transform: capitalize
+         
+      .lb-img-container
+         max-height: 450px
+         overflow-x: hidden
+         background-color: $color-main
+         padding: 1px
+            
+         img
+            width: 100%

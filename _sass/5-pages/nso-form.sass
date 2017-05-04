@@ -1,0 +1,397 @@
+.form_cert     
+   .form-container         
+      .form
+         +position(relative, null null null 0px)
+         +transition(all 0.8s ease-in-out 0s)
+         +clearfix()
+         width: 200%
+         
+         > *
+            float: left
+            width: 50%
+            +transition(all .5s ease-in-out 0s)            
+            
+         &.toggle-form         
+            left: -100%
+            
+            .requestor-details
+               opacity: 0
+               max-height: 500px
+               
+            .other-details
+               opacity: 1
+               max-height: 10000px
+               
+         .requestor-details
+            opacity: 1
+            max-height: 10000px
+            
+         .other-details
+            opacity: 0
+            max-height: 500px
+            
+            .delivery-details               
+               fieldset .w_above
+                  +display(block)
+                  
+                  span
+                     font-size: .85rem   
+                     min-width: 100%
+                     
+                  input
+                     width: 100%
+                     height: 3rem
+            
+            .requestor-summary               
+               div
+                  +clearfix()
+                  
+                  span
+                     float: left
+                     width: 50%
+                     text-transform: capitalize
+                     
+                     &:first-of-type
+                        width: 150px
+                        
+               .php-add
+                  +display(none)
+                     
+                  &.toggle-add
+                     +display(block)
+
+                     ~ .unphp-add
+                        +display(none)
+                        
+               .unphp-add
+                  +display(block)
+                     
+               fieldset
+                  padding: 1.3rem 0px 0px
+                     
+               .edit
+                  text-align: right
+                  padding: .5rem
+                  span
+                     margin: 0px
+                     border-radius: 3px
+                     color: $color-main
+                     text-transform: capitalize
+                     padding: .2rem .7rem
+                     font-size: 1rem
+                     background-color: $border-color-alt
+                     +display(inline-block)
+                     cursor: pointer
+                        
+                     &:hover
+                        background-color: darken($border-color-alt, 5)               
+         
+         fieldset
+            margin: 0px
+            border: 0px
+            width: 100%
+            padding: 1.3rem 0px
+            border-top: 1px solid $border-color      
+
+            header
+               +position(relative)
+               z-index: 1
+
+               h4
+
+               .what
+                  +position(absolute, 0px 0px null null)
+                  text-align: center
+                  +size(1.2rem)
+                  background-color: #ff4040
+                  color: $color-main
+                  line-height: 1.4rem
+                  border-radius: 50%
+                  box-shadow: 0px 0px 4px 0px rgba(black, .4)
+
+                  .ans
+                     opacity: 0
+                     +position(absolute, 1.5rem 0px null null)
+                     background-color: $color-main
+                     border: 1px solid #e6ba47
+                     text-align: left
+                     max-width: 0px
+                     padding: .6rem
+                     color: $text-color
+                     max-height: 0px
+                     overflow: hidden
+                     z-index: -1
+                     +transition(all .2s ease-out 0s)
+                     box-shadow: 0px 0px 3px 1px rgba(black, .1)   
+
+                     .overflow-support
+                        +size(300px auto) 
+
+                        h4
+                           margin-bottom: .8rem
+                           border-bottom: 2px solid #e6ba47
+                           padding: .2rem 0px
+                           text-transform: capitalize
+
+                        p:last-of-type
+                           margin-bottom: 0px
+
+                  &:hover .ans
+                     max-width: 1500px
+                     max-height: 1500px
+                     opacity: 1          
+                     
+            > div
+               padding-bottom: .4rem
+                                    
+            .copies
+               select
+                  min-width: 100px
+                  
+            .amount, .t-amount, .delivery-amount
+               input
+                  border: 0px
+                  
+            .amount span, .delivery-amount span
+               +position(relative)
+               
+               &:after
+                  content: '*'
+                  font-size: 1.8rem
+                  line-height: 1.6
+                  color: $color-alt-light
+                  +size(10px 100%)
+                  +position(absolute, 0px 15px null null) 
+                  
+            .delivery-amount span:after
+               content: '+'  
+               line-height: 1.11
+                  
+            .t-amount
+               border-top: 1px solid $border-color
+               font-size: 1.5rem
+               font-weight: normal
+                  
+            .delivery-pickup
+               padding: 0px
+               +clearfix()
+               
+               > span
+                  float: left
+                  width: 50%
+                  line-height: 1.4
+                  
+                  input, label
+                     +display(inline-block)
+                     width: auto
+                     padding: 0px .3rem
+                     
+            .delivery
+               padding: 0px
+               +display(none)   
+                     
+               > span
+                  padding: .5rem .7rem
+                  margin: .5rem 0px
+                  +display(block)
+                  @extend .smaller
+
+            .pickup
+               padding: .4rem 0px 0px
+               +display(none)
+                  
+               > a
+                  @extend .small
+                  color: darken($border-color, 40)
+                  
+                  &:hover
+                     color: $text-color
+                     
+            .toggle-delivery
+               +display(block)
+                     
+            label
+               +display(block)
+               padding: .4rem 0px
+
+               &:last-of-type
+                  padding-bottom: 0px 
+
+               span, h4
+                  +display(block)
+
+               input, textarea
+                  padding: 0px .3rem
+                  width: 100%
+
+               textarea
+                  padding: .3rem
+                  height: 5em
+                  resize: none
+                  
+               input
+                  text-transform: capitalize
+               
+               [type='email']
+                  text-transform: none
+
+            .col-3 div
+               +clearfix()
+               width: 100%
+
+               input, select
+                  width: 100%
+                  margin-bottom: .4rem
+                     
+               input
+                  margin-bottom: 0px
+                  
+            .country
+               padding-bottom: .4rem !important
+
+         .time
+            label 
+               select, input
+                  width: 100%
+                  
+            &.toggle-add
+               .php-add
+                  +display(none)
+                     
+               .unphp-add
+                  +display(block)
+                  
+            .php-add
+               +display(block)
+               
+            .unphp-add
+               +display(none)
+
+
+         .purpose label
+            padding: 0px      
+
+         .cta-submit, .cta-continue
+            text-align: center
+            padding: .5rem 0px
+
+            > *
+               @extend .cta
+               @extend .big
+               margin: 0px
+               width: 100%
+               line-height: 1.4
+
+         input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button
+            -webkit-appearance: none
+            margin: 0px
+
+         input:focus, select:focus, textarea:focus
+            outline: none
+
+@media screen and (min-width: 450px)
+   .form_cert     
+      .form-container         
+         .form
+            .other-details
+               .delivery-details
+                  fieldset .w_above
+                     input
+                        height: 3rem
+                        
+            fieldset
+               label
+                  +display(flex)
+
+                  span, h4
+                     width: 135px
+                     min-width: 135px
+                     line-height: 1.9
+
+                  input, textarea
+                     +flex-grow(1)
+         
+@media screen and (min-width: 550px)
+   .form_cert     
+      .form-container         
+         .form
+            .other-details
+               .delivery-details
+                  fieldset .w_above      
+                     input
+                        width: 100%
+
+               .requestor-summary
+                  div
+                     span:first-of-type
+                        width: 200px
+
+            fieldset
+               label
+                  span, h4
+                     width: 190px
+                     min-width: 190px
+                     
+@media screen and (min-width: 768px)          
+   .form_cert     
+      .form-container         
+         .form
+            fieldset
+               padding: 1.3rem .5rem
+            
+               header
+                  .what
+                     .ans
+                        top: -.5rem
+                        right: -.5rem
+                           
+                        .overflow-support
+                           width: 450px
+               
+               .col-3 div
+                  +clearfix()
+
+                  input, select
+                     width: 163px
+                     float: left
+                     margin-right: 1%
+                     margin-bottom: 0px
+                     
+            .time
+               label 
+                  select, input
+                     width: 331px
+                     max-width: 331px
+
+
+                     
+@media screen and (min-width: 992px)               
+   .form_cert     
+      .form-container         
+         .form
+            .other-details
+               +clearfix()
+
+               > *
+                  width: 50%
+
+               .delivery-details
+                  float: left
+                  padding-right: .5rem
+
+               .requestor-summary
+                  float: right
+                  padding-left: .5rem
+
+
+            fieldset
+               .col-3 div
+                  input, select
+                     width: 210px
+
+            .time
+               label 
+                  select, input
+                     width: 210px
+                     max-width: 210px
+   

@@ -1,0 +1,403 @@
+.ticketing-post
+   h2
+      text-transform: uppercase
+         
+   .twogo-travel
+      color: #ec078d
+
+   .oceanjet
+      color: #dc1f25
+
+   .supercat
+      color: #f0027f
+      
+   .form-container
+      margin-top: 1.5rem
+      +transition(all 0s ease-out 0s, max-height 1s ease-out 0s)
+
+      .steps
+         .cta
+            @extend .bigger
+            margin: 1rem 0px 0px
+            width: 100%               
+
+      .form-ticketing         
+         max-height: 0px
+         overflow: hidden
+         opacity: 0
+         +transition(all 1.5s ease-in-out 0s)
+
+         &.display-form
+            opacity: 1
+            max-height: 2000px
+
+            ~ .steps .cta
+               +display(none)
+
+         .cta-submit
+            padding: .8rem 0px
+
+            &.cta-switch
+               .continue
+                  +display(none)
+
+               [type='submit']
+                  +display(block)
+
+            > *
+               @extend .bigger
+               @extend .cta
+               margin: 0px
+
+            [type='submit']
+               width: 100%
+               +display(none)
+
+            .continue
+               float: right
+
+         fieldset
+            margin: 0px
+            border: 0px
+            padding: 1rem  0px
+            border-bottom: 1px solid $border-color-light
+
+            > span
+               +display(block)
+               width: 100%
+               line-height: 1.8
+
+            label, select
+               width: 100%
+
+               > span
+                  @extend .smaller  
+
+               select, input
+                  width: 100%
+
+               input
+                  text-transform: capitalize
+                  padding: 0px .3rem
+
+         input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button
+            -webkit-appearance: none
+            margin: 0px
+
+         input:focus, select:focus, textarea:focus
+            outline: none
+
+         .customers                   
+            span
+               width: 100%
+
+            .cust-item
+               +clearfix()
+
+               > label
+                  float: left
+                  margin-right: 1%
+
+                  &:last-of-type
+                     margin-right: 0px          
+
+               .lname, .fname
+                  width: 38.5%
+
+               .mname, .age
+                  width: 10%             
+
+         .origin, .contact, .email
+            > label
+               +clearfix()
+
+               > span
+                  float: left
+                  width: 50%
+                  text-transform: capitalize
+                  font-size: 1rem
+
+                  input
+                     margin-right: .3rem
+                     +size(auto)   
+
+
+         .origin               
+            > label
+               width: 60%
+
+               input
+                  width: 210px
+
+               span label
+                  width: auto
+                  float: none
+
+
+         .accommodation
+            label                  
+               select 
+                  text-transform: capitalize
+
+         .sched                       
+            div
+               margin: 0px -.1rem
+               +clearfix()
+
+               label
+                  float: left
+                  +display(block)
+                  margin: 0px .1rem
+
+                  span
+                     +display(block)
+
+               .sched-item
+                  +display(none)
+
+                  &.active-sched
+                     +display(block)
+
+               .month
+                  width: auto
+
+               .time, .year, .day
+                  width: 65px     
+
+   .boat-details 
+      h4
+         margin-bottom: .2rem
+         text-transform: uppercase
+
+      .boat
+         padding: .4rem
+         border: 1px solid $border-color-light
+
+         &:after
+            +display(none)
+
+         img
+            +size(100% auto)
+            
+      .book-now
+         @extend .cta
+         @extend .bigger
+         margin-top: .5rem
+         width: 100%
+
+      .accom
+         margin: 1.5rem 0px 1.3rem
+
+         .accom_text          
+            .sub-sub-title
+               text-transform: capitalize
+               +display(block)
+
+               svg
+                  +size(15px 14px)
+                  fill: $color-alt-light
+                  margin-right: .2rem
+
+            .sub-sub-desc
+               padding-left: 1.3rem
+               margin-bottom: .5rem
+               +display(inline-block)
+
+               &:last-of-type
+                  margin-bottom: 0px
+
+         .accom_imgs
+            margin: 0px -.5% -1rem
+            +clearfix
+
+            .accom_item
+               margin: 0px .5% 1rem
+               float: left
+               width: 49%
+
+               .sub-sub-title
+                  text-transform: capitalize
+                  +display(block)
+
+            .img
+               margin: 0px
+               overflow: hidden
+               +size(100% 100px)
+               border: 1px solid $border-color-light
+
+      .amenities
+         margin: 0px -2px -3px
+         +clearfix
+
+         .img
+            margin: 0px 2px 3px
+            float: left
+            width: 32%
+            border: 1px solid $border-color-light
+
+      .sched
+         text-align: center
+
+         .sched-item
+            border: 1px solid darken($color-alt-lighter, 8)
+            margin-bottom: 1.5rem
+
+            strong
+               +display(block)
+               padding: .8rem .2rem
+               text-transform: uppercase
+               background-color: lighten($color-alt-lighter, 5)
+               border-bottom: 1px solid darken($color-alt-lighter, 8)
+
+            span
+               +display(block)
+               padding: .6rem 0px
+
+               &:nth-child(odd)
+                  background-color: lighten($color-alt-lighter, 8)
+
+               &:nth-child(even)
+                  background-color: $color-main
+               
+@media screen and (min-width: 460px)
+   .ticketing-post                     
+      .boat-details                  
+         .amenities            
+            .img
+               width: 23.7%     
+
+         .sched
+            +display(flex)
+            +flex-wrap(wrap)
+            margin: 0px -.2rem -3rem
+
+            .sched-item
+               float: left
+               width: 48.2%
+               +flex-basis(48.2%)
+               margin: 0px .2rem 3rem
+
+@media screen and (min-width: 550px)
+   .ticketing-post
+      > *
+         max-width: 550px
+         margin-left: auto
+         margin-right: auto
+        
+      .form-container   
+         .form-ticketing        
+            fieldset
+               label
+                  select, input
+
+      .boat-details
+         .accom
+            .accom_imgs
+               .img
+                  +size(100% 120px)
+
+         .amenities            
+            .img
+               width: 24%     
+                  
+@media screen and (min-width: 600px)
+   .ticketing-post           
+      .form-container  
+         .form-ticketing                                    
+            fieldset       
+               +clearfix()
+
+               > span   
+                  float: left  
+                  width: 190px
+
+               label, select
+                  float: left
+                  width: 210px  
+
+         .form-ticketing
+            .sched                       
+               div
+                  .year, .time, .day
+                     width: 73px
+
+@media screen and (min-width: 768px)
+   .ticketing-post      
+      > *
+         max-width: none
+      
+      .form-container         
+         .form-ticketing                                   
+            .origin, .contact, .email
+               > label
+                  > span
+                     width: 50%   
+
+      .boat-details     
+         .boat
+            max-width: 430px
+            
+         .book-now
+            max-width: 430px
+
+         .accom    
+            .accom_imgs
+               margin: 0px -3px -1rem
+
+               .accom_item
+                  margin: 0px 3px 1rem
+                  width: 174px   
+
+               .img
+                  +size(100% 100px)
+
+         .amenities
+            margin: 0px -3px -6px
+
+            .img
+               margin: 0px 3px 6px
+               width: 138px
+
+         .sched
+            .sched-item
+               width: 24%
+               +flex-basis(24%)
+
+@media screen and (min-width: 992px)
+   .ticketing-post          
+      .form-container
+         .form-ticketing
+            .sched                       
+               div
+                  .month
+                     width: 90px
+
+      .boat-details   
+         .accom         
+            .accom_imgs
+               +clearfix
+
+               .accom_item
+                  width: 176px              
+
+               .img
+                  +size(100% 105px)
+
+         .amenities
+            .img
+               width: 112px
+
+@media screen and (min-width: 1200px)
+   .ticketing-post    
+      .boat-details   
+         .accom         
+            .accom_imgs
+               .accom_item
+                  width: 212px           
+
+               .img
+                  height: 123px
+
+         .amenities
+            .img
+               width: 136px

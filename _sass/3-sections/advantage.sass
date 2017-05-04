@@ -1,0 +1,80 @@
+#advantage
+   .advantage-container
+      @extend .container
+      text-align: center         
+            
+      h2
+         color: $color-alt-light
+         margin-bottom: 3rem
+         text-transform: capitalize
+         opacity: 1
+         +transition(all .5s ease-out 0s)
+         
+      .wrapper         
+         margin: 0px 0px -3rem
+         
+         .advantage-item-flex
+            margin-bottom: 3rem
+            text-align: center
+            +display(block)
+            +transition(all .5s ease-out 0s)
+            +transform(none)
+            opacity: 1
+            @for $i from 1 through 6
+               &:nth-of-type(#{$i})
+                  +transition-delay(.15s * $i)
+               
+            .img
+               margin: 0px
+                  
+               svg
+                  +size(2.2rem)
+                  fill: $color-alt-light
+                     
+            .text
+               h4
+                  +display(inline-block)
+                  margin: .8rem 0px .4rem
+                  text-transform: capitalize
+                     
+                  &:before
+                     background-color: $color-alt-light
+               
+               .blurb
+                  margin-bottom: 0px
+                  
+   &.advantage-animate .advantage-container
+      h2
+         opacity: 0
+         
+      .wrapper .advantage-item-flex
+         opacity: 0
+         +transform(translateX(50px))      
+                  
+@media screen and (min-width: 650px)
+   #advantage
+      .advantage-container
+         .wrapper    
+            +display(flex)
+            +flex-wrap(wrap)
+            
+            .advantage-item-flex
+               width: 50%
+               +flex-basis(50%)
+                  
+@media screen and (min-width: 992px)
+   #advantage
+      .advantage-container
+         .wrapper         
+            .advantage-item-flex
+               text-align: left
+               padding: 0px 3rem
+               +display(flex)
+               +align-items(center)
+
+               .img
+                  padding-right: .8rem
+
+               .text
+                  h4
+                     margin: 0px 0px .2rem

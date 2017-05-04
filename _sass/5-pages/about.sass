@@ -1,0 +1,62 @@
+.about      
+   * h1
+      @extend .large
+      margin-bottom: 2rem
+   
+   .hero-page .hero-container
+      padding: 0px
+      
+      p
+         max-width: 610px
+
+   .mis-vis .mis-vis-container
+      @extend .container
+
+      > div
+         &:first-of-type
+            margin-bottom: 2.5rem
+         
+   #advantage .advantage-container
+      padding-top: 1rem
+      padding-bottom: 2rem
+      
+      .wrapper
+         .advantage-item-flex
+            width: initial
+            +display(block)
+            padding: 0px 1rem
+            text-align: center
+   
+            .img
+               margin-bottom: 1.5rem
+            
+@media screen and (min-width: 550px)
+   .about      
+      .mis-vis .mis-vis-container
+         +clearfix
+         margin-left: -3%
+         margin-right: -3%
+
+         > div
+            float: left
+            width: 44%
+            margin: 0px 3% 
+            
+            &:first-of-type
+               margin-bottom: 0px
+               
+@media screen and (min-width: 992px)
+   .about   
+      #advantage .advantage-container
+         .wrapper
+            .advantage-item-flex
+               width: 50%
+               +display(block)
+               padding: 0px 1rem
+               text-align: center
+
+               .img
+                  margin-bottom: 1.5rem
+   
+   
+   

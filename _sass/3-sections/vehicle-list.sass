@@ -1,0 +1,136 @@
+.vehicle-list
+   +clearfix
+
+   .vehicle
+      +position(relative)
+      padding: 1rem 1rem 0px
+      margin-bottom: 1.5rem
+      background-color: $color-main
+      z-index: 1
+      text-align: center
+      +transition(.2s)
+      border:
+         width: 1px 
+         style: solid
+         color: $border-color
+         radius: 3px
+         
+      &:last-of-type
+         margin-bottom: 0px
+      
+      .vehicle-name
+         @extend .large
+         text-transform: uppercase
+
+         span
+            @extend .bigger
+
+      .img
+         +display(inline-block)
+         +size(200px 100%)
+         padding: .5rem 0px
+
+         img
+            +size(100% auto)
+
+      .cta-container
+         background-color: $color-main
+         padding: .8rem
+         z-index: -1
+         border:
+            width: 3px 1px 0px
+            style: solid
+            color: $color-alt-light $border-color
+
+         > *
+            @extend .big
+            +display(inline-block)
+            
+
+         .cta
+            margin: 0px
+
+         .price
+            padding: 0.5rem 1.2rem
+            border:
+               width: 2px
+               style: solid
+               color: $color-alt-light
+               
+@media screen and (min-width: 460px)
+   .vehicle-list
+      .vehicle
+         padding: 1rem
+         +size(100% 162px)
+         text-align: left
+         +clearfix()
+
+         .vehicle-name
+            float: left
+
+            span
+               +display(block)
+
+         .img
+            float: right
+            +size(200px 100%)
+            padding: 0px 1rem 0px 0px
+            
+         .cta-container
+            +position(absolute, null 1rem 0px 1rem)
+            background-color: $color-main
+            padding: .8rem
+            z-index: -1
+            border:
+               width: 3px 1px 0px
+               style: solid
+               color: $color-alt-light $border-color
+
+            > *
+               float: left
+
+            .price
+               border:
+                  width: 2px 2px 2px 0px
+               
+@media screen and (min-width: 550px)
+   .vehicle-list
+      .vehicle
+         .vehicle-name
+            span
+               +display(inline-block)
+
+               
+@media screen and (min-width: 768px)
+   .vehicle-list
+      .vehicle
+         +size(100% 190px)
+
+         .vehicle-name
+            span
+               +display(block)
+
+         .img
+            padding: 1rem 1rem 0px 0px
+               
+@media screen and (min-width: 992px)
+   .vehicle-list
+      .vehicle
+         +size(100% 162px)
+         
+         .vehicle-name span
+            +display(inline-block)
+
+         .img
+            +size(250px 100%)
+            white-space: nowrap
+            padding: 0px 1rem 0px 0px
+
+            &:before
+               content: ''
+               height: 100%
+               vertical-align: middle
+               +display(inline-block)
+
+            img
+               +size(100% auto)

@@ -1,0 +1,96 @@
+.page-sidebar-support
+   .page-container
+      @extend .container
+      padding-bottom: 1.5rem
+      
+      .main
+         background-image: none
+         +position(relative)
+         z-index: 2
+         width: 100%
+         margin-bottom: 2.5rem
+         border-bottom: 1px solid rgba(#555555, .5)   
+
+      .sidebar
+         width: 100%
+
+         h4
+            background-color: $color-alt-light
+            padding: .4rem .5rem .2rem
+            color: $color-main   
+            text-transform: uppercase
+            margin-bottom: .8rem
+
+         .permits           
+            margin: 0px -.5% -.2rem
+
+            .img
+               padding: 3px
+               border: 1px solid $color-alt-light
+               +display(inline-block)
+               margin: 0px .5% .2rem
+               +size(48.5% auto)
+               box-shadow: $box-shadow
+               
+               &:after
+                  background-color: rgba(black, .05)
+
+               &:last-of-type
+                  margin-right: 0px  
+               
+@media screen and (min-width: 500px)
+   .page-sidebar-support
+      .page-container
+         .sidebar
+            .permits           
+               .img
+                  +size(31.9% auto)
+
+@media screen and (min-width: 768px)
+   .page-sidebar-support .page-container
+      +clearfix
+      padding-bottom: 4rem
+
+      .main
+         float: left
+         width: 480px
+         margin-bottom: 0px
+         padding-bottom: 0px
+         border-bottom: 0px
+         
+      .sidebar
+         width: 175px
+         float: right
+         margin-left: 1rem
+
+         .permits            
+            .img
+               margin-bottom: .2rem
+               +size(100% auto)
+
+@media screen and (min-width: 992px)
+   .page-sidebar-support .page-container
+      .main
+         width: 576px
+         
+      .sidebar
+         width: 300px
+
+         .permits
+            margin: 0px -1% -.5rem
+
+            .img
+               margin: 0px 1% .5rem
+               +size(47.4% auto)
+            
+            .BIR
+               width: 98% !important
+               height: auto !important
+
+@media screen and (min-width: 1200px)
+   .page-sidebar-support .page-container
+      .main
+         width: 725px   
+         
+      .sidebar
+         width: 330px     

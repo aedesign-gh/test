@@ -1,0 +1,313 @@
+#vehicle
+   background:
+      image: url('../img/car-rental-bg.jpg')
+      position: center center
+      size: cover
+      repeat: no-repeat
+      
+   .vehicle-container
+      @extend .container
+      padding-bottom: 2rem
+      
+      .tada         
+         +position(absolute, 0px null null 1.5rem)
+         +display(none)
+         +transition(all .5s ease-out .3s)
+         opacity: 1
+            
+         .site-brand
+            padding: 7px
+            float: left
+            background-color: $color-alt
+            border: 1px solid $color-alt-lighter
+            border-radius: 0px 0px 4px 4px
+            +position(relative)
+            z-index: 1
+            
+            img
+               +size(150px auto)
+               
+         .site-contact
+            @extend .small
+            float: left            
+            margin-top: 1rem
+            padding: 6px 10px
+            border-radius: 0px 3px 3px 0px
+            background-color: $color-main
+            +transition(all .5s ease-out 1s)
+            +transform(none)
+            opacity: 1
+            
+            span
+               +display(inline-block)
+               padding-right: .8rem
+               border-right: 1px solid rgba($color-alt, .5)
+               margin-right: .6rem
+                  
+               &:last-of-type
+                  padding: 0px
+                  border: 0px
+                  margin: 0px
+            
+      .see-all-cars
+         @extend .bigger
+         +position(absolute, 1rem null null 1rem)
+         color: $color-strong
+         background-color: rgba(#000, .6)
+         padding: .4rem 1rem .3rem
+         border: 1px solid $color-strong
+         +transition(all .2s ease-out 0s)
+         
+      .car         
+         .car-img
+            +position(relative)
+            text-align: right
+            padding-top: 60px
+            margin: 0px
+               
+            img
+               +size(100% auto)
+               +transition(all .5s ease-out 0s)
+               +transform(none)
+               opacity: 1
+               
+            .best-choice
+               @extend .large
+               text-transform: uppercase
+               background-color: $color-strong
+               +display(block)
+               padding-top: 1rem
+               font-weight: 500
+               +size(110px)
+               color: $text-color
+               text-align: center
+               border-radius: 50%
+               +position(absolute, -1rem .5rem null null)
+               box-shadow: 0px 0px 1rem .5rem rgba($color-strong, .7)
+               +transition(all .1s ease-in-out 0s)
+               
+               &:before
+                  content: ''
+                  border-radius: 50%
+                  border: 3px solid rgba($color-strong, .6)
+                  +position(absolute, -8px -8px -8px -8px)
+               
+               &:hover
+                  +transform(scale(1.05))
+               
+               
+         .car-details
+            border: 1px solid $color-alt-light
+            border-radius: 5px
+            overflow: hidden
+            margin-top: -1rem
+            background-color: $color-main
+               
+            .car-name
+               background-color: $color-alt-lighter
+               color: $text-color
+               text-transform: uppercase
+               padding: 1rem 1rem .5rem
+               border-bottom: 1px solid $color-alt-light
+               margin: 0px
+               font-weight: 500
+               
+               .brand
+                  @extend .large
+                  margin-left: 1rem
+                  color: $text-color
+                  
+            .spec-price               
+               +display(block)
+               padding: 1.5rem 1rem 1rem
+               text-align: center
+               
+               > *
+                  text-transform: uppercase  
+                  margin-bottom: 0px 
+               
+               .spec
+                  margin: -.5rem 0px 0px
+                  text-align: left
+                  +clearfix
+               
+                  span
+                     @extend .bigger
+                     +display(block)
+                     line-height: 1.6
+                     margin: .5rem 0px                     
+                     
+                     svg
+                        margin-right: .5rem
+                        +size(1.556rem)
+                        fill: $color-alt-light
+                        
+                  &.specBlock
+                     span
+                        float: none
+                        width: auto
+                        line-height: 1.6
+                        
+               .price
+                  margin: .6rem 0px
+                     
+               .cta
+                  @extend .large
+                  +display(block)
+                     
+   &.vehicle-animate .vehicle-container
+      .tada
+         opacity: 0
+         +transform(translateY(-200px))
+            
+         .site-contact
+            +transform(translateX(-20px))
+            opacity: 0
+            
+      .car .car-img img
+         opacity: 0
+         +transform(translateX(-50px))
+                  
+@media screen and (min-width: 430px)
+   #vehicle
+      .vehicle-container
+         .car
+            .car-details
+               .spec-price               
+                  .spec
+                     span
+                        line-height: 1.4
+                        float: left
+                        width: 50%                          
+                     
+@media screen and (min-width: 500px)
+   #vehicle
+      .vehicle-container
+         .car
+            .car-img
+               img
+                  +size(100% auto)
+
+            .car-details
+               .spec-price             
+                  padding: 1.5rem
+                     
+@media screen and (min-width: 550px)
+   #vehicle
+      .vehicle-container
+         .car
+            .car-img
+               padding-top: 65px
+
+               .best-choice
+                  padding-top: 1.4rem
+                  +size(145px)
+                  
+            .car-details .spec-price .price
+               margin: 1rem 0px
+
+                        
+@media screen and (min-width: 768px)
+   #vehicle
+      .vehicle-container
+         .see-all-cars
+            +position(absolute, 1rem 1.5rem null initial)
+            background-color: rgba(#000, .3)
+
+            &:hover
+               background-color: rgba(#000, .7)
+               
+         .car
+            .car-img
+               margin: 1em 40px
+
+               img
+                  +size(650px auto)
+                  
+               .best-choice
+                  top: 0px
+                  right: 0px
+                     
+@media screen and (min-width: 992px)
+   #vehicle
+      .vehicle-container
+         .tada         
+            +display(block)
+            +position(absolute, 0px null null 1.5rem)
+               
+            &.no-tada
+               +display(none)
+
+            .site-brand
+               padding: 7px
+               float: left
+               background-color: $color-main
+               border: 1px solid $color-alt
+               border-top: 0px
+               border-radius: 0px 0px 4px 4px
+
+               img
+                  +size(150px auto)
+
+            .site-contact
+               float: left            
+               margin-top: 1rem
+               padding: 6px 10px
+               border-radius: 0px 3px 3px 0px
+               background-color: $color-main
+
+               span
+                  +display(inline-block)
+                  padding-right: .8rem
+                  border-right: 1px solid rgba($color-alt, .5)
+                  margin-right: .6rem
+
+                  &:last-of-type
+                     padding: 0px
+                     border: 0px
+                     margin: 0px
+
+         .car
+            .car-details
+               margin-top: -6rem
+
+               .spec-price               
+                  +display(flex)
+                  +align-items(center)
+                  +justify-content(space-between)
+                  padding: 1rem 1.5rem
+                  text-align: left
+
+                  .spec
+                     +flex-basis(450px)
+                     margin: -.5rem 0px
+                     border-right: 2px solid $color-alt-light
+                     
+                     .doors
+                        +display(none)
+
+                  .cta
+                     +align-self(stretch)
+                     margin: 0px
+                     white-space: nowrap
+                     
+                     &:before
+                        content: ''
+                        vertical-align: middle
+                        +display(inline-block)
+                        height: 100%
+
+                     
+@media screen and (min-width: 1200px)
+   #vehicle
+      .vehicle-container
+         .car
+            .car-details
+               .spec-price               
+                  padding: 1rem 1.5rem
+
+                  .spec
+                     +flex-basis(620px)
+
+
+

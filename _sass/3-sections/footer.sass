@@ -1,0 +1,231 @@
+#footer
+   background-color: $footer-bgcolor
+   border-top: 1px solid $border-color
+   
+   *
+      color: $color-main
+   
+   .footer-container
+      @extend .container
+      padding-bottom: 0px
+      
+      .find-tour           
+         +display(block)
+         margin-bottom: 3rem
+         text-align: center
+         
+         > *
+            margin: 0px
+         
+         h3
+            margin: 1.3rem 1rem 1.3rem 0px
+            font-size: 1.7rem
+            
+         .cta
+            @extend .bigger
+            
+      .partnership
+         +display(none)
+            
+      .separator
+         height: 1px
+         border: 0px
+         margin: 3rem 0px
+         background-color: rgba($color-main, .5)
+         
+      .footer-post
+         +display(block)
+         +clearfix
+         
+         * p
+            line-height: 1.7
+         
+         ul
+            list-style-type: none
+            padding: 0px
+            
+            li
+               +position(relative)
+               padding-left: 17px
+               line-height: 1.7
+               
+               &:before
+                  content: ''
+                  width: 10px
+                  +position(absolute, 0px null 0px 0px)
+                  background:
+                     image: url('../img/check.png')
+                     position: 0px center
+                     size: 100% auto
+                     repeat: no-repeat
+                  
+         .col-flex
+            +clearfix
+               
+            .col-item
+               width: 50%
+               float: left
+
+         .services
+            width: 100%
+            max-width: 500px
+            margin-bottom: 2.5rem
+
+            ~ *
+               float: left
+               width: 50%
+
+         .office-hour
+            +display(none)
+            
+      .copyright
+         @extend .small
+         @extend .title
+         margin-top: 3rem
+         line-height: 1
+         text-transform: initial
+         
+         a:hover
+            border-bottom: 1px dotted $color-main
+         
+         
+@media screen and (min-width: 600px)
+   #footer
+      .footer-container
+         .footer-post
+            +display(flex)
+
+            .services
+               width: 70%
+               +flex-basis(70%)
+               margin-bottom: 0px
+
+               ~ *
+                  float: none
+                  width: 30%
+                  +flex-basis(30%)
+
+            .address
+               +display(none)
+
+         .copyright
+            margin-top: 4rem
+         
+@media screen and (min-width: 768px)
+   #footer
+      .footer-container
+         .find-tour           
+            +display(flex)
+            +justify-content(center)
+            +align-items(center)
+
+            p
+               margin: 0px 1rem 0px 0px      
+               
+            .cta         
+               margin: 0px
+            
+               &:hover
+                  background-color: transparent   
+
+         .partnership
+            +display(flex)
+            +align-items(center)
+            +justify-content(center)
+
+            > a
+               +display(block)
+               margin: 0px 1rem
+               +position(relative)
+
+               > img
+                  cursor: pointer
+
+               img:first-of-type
+                  opacity: 0
+
+               img:last-of-type
+                  +transition(all .2s ease-out 0s)
+                  +position(absolute, 0px null null 0px)
+
+               &:hover
+
+                  img:first-of-type
+                     opacity: 1
+
+                  img:last-of-type
+                     opacity: 0
+
+            .phil-air img,
+               +size(190px auto)
+
+            .air-asia img, .dot img
+               +size(60px)
+
+            .cebu-pac img
+               +size(auto 35px)
+
+            .morefuninphil img
+               +size(auto 45px)     
+               
+         .footer-post      
+            * a:hover
+               color: #e6ba47
+            
+            * p
+               line-height: 1.4
+               
+            .title
+               margin-bottom: .5rem
+               
+            ul li
+               line-height: 1.4
+
+            
+@media screen and (min-width: 992px)
+   #footer
+      .footer-container  
+         .partnership
+            > div
+               margin: 0px 1.5rem
+
+            .phil-air img,
+               +size(200px auto)
+
+            .air-asia img, .dot img
+               +size(70px)
+
+            .cebu-pac img
+               +size(auto 40px)
+
+            .morefuninphil img
+               +size(auto 50px)           
+
+         .footer-post
+            .services
+               width: 40%
+               +flex-basis(40%)
+
+               ~ *
+                  width: 20%
+                  +flex-basis(20%)
+               
+            .office-hour, .address
+               +display(block)
+         
+@media screen and (min-width: 1200px)
+   #footer
+      .footer-container
+         .partnership
+            .phil-air img,
+               +size(220px auto)
+
+            .air-asia img, .dot img
+               +size(90px)
+
+            .cebu-pac img
+               +size(auto 60px)
+
+            .morefuninphil img
+               +size(auto 70px)           
+

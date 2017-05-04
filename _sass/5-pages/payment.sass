@@ -1,0 +1,74 @@
+.payment            
+   .bank
+      background-color: $color-main
+
+      strong
+         text-transform: capitalize
+
+      img
+         margin-bottom: .8rem
+         +size(100% auto)
+
+      .details
+
+         td
+            &:first-of-type
+               min-width: 100px
+               vertical-align: baseline
+               padding-right: .5rem
+               
+      .wrapper
+         margin-bottom: 1.5rem
+
+      .atm
+         +display(block)
+
+         .bpi-img
+            background-color: #b11016
+
+         .bdo-img
+            background-color: #0b2972
+
+         .img
+            +size(100% auto)
+            margin: 0px .6rem .8rem 0px
+            text-align: center
+
+            img
+               +size(135px auto)
+               margin: 0px
+      .note
+         text-transform: initial
+         +display(inline-block)   
+                  
+@media screen and (min-width: 550px)
+   .payment
+      .bank
+         .details
+            td
+               &:first-of-type
+                  width: 130px
+               
+@media screen and (min-width: 768px)
+   .payment                   
+      .bank
+         img
+            +size(auto)
+         .atm
+            .img
+               img
+                  +size(160px auto)
+
+@media screen and (min-width: 1200px)
+   .payment
+      .bank
+         .atm
+            +display(flex)
+            +align-items(flex-start)
+
+            .img
+               width: 220px
+               margin-bottom: 0px
+
+               img
+                  width: 220px
