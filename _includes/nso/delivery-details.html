@@ -1,0 +1,103 @@
+<div class='delivery-details'>
+   <fieldset>
+      <h4>Contact Info</h4>
+      <span class='note strong'>Please provide valid and accurate contact information. Should there be any concerns with your application, we will use these information to contact you.</span>
+      <label>
+         <span>Mobile Number</span>
+         <input name='mobile-number' type='number' tabindex="-1">
+      </label>
+      <label>
+         <span>Landline Number</span>
+         <input name='landline-number' type='number' tabindex="-1">
+      </label>
+      <label>
+         <span>Primary Email</span>
+         <input name='email' type='email' tabindex="-1">
+      </label>
+   </fieldset>
+
+   <fieldset>
+      <label class='delivery-pickup'>
+         <span><input id='pickup' type='radio' name='method' value='pickup' tabindex="-1" checked><label for='pickup'><h4>Pickup</h4></label></span>
+         <span><input id='delivery' type='radio' name='method' value='deliver' tabindex="-1"><label for='delivery'><h4>Delivery Address</h4></label></span>         
+      </label>
+      
+      <div class='delivery'>
+         <span class='top'>Please provide a valid delivery address. This is where your PSA certificate will be delivered.</span>
+         <label>
+            <span>Province</span>
+            <input name='delivery-province' type='text' tabindex="-1">
+         </label>
+         <label>
+            <span>City/ Municipality</span>
+            <input name='delivery-city' type='text' tabindex="-1">
+         </label>    
+         <label class='w_above'>
+            <span>House/Apartment/Unit/Floor No., Building Name, Company Name (if office), Street Name</span>
+            <textarea name='address-1' type='text' tabindex="-1"></textarea>
+         </label>
+         <label class='w_above'>
+            <span>Town/Subdivision/Village/District Name, City, State/Province</span>
+            <textarea name='address-2' type='text' tabindex="-1"></textarea>
+         </label>
+      </div>  
+      
+      <div class='pickup toggle-delivery'>
+         <p>Mezzanine Floor<br>
+            Rose BLDG., CPG Ave.,<br>
+            Tagbilaran City, 6300<br>
+            Bohol, Philippines
+         </p>
+         <p>Smart: <a href='tel:{{ site.data.settings.contact.smart }}' tabindex="-1">{{ site.data.settings.contact.smart }}</a><br>
+            Phone: <a href='tel:{{ site.data.settings.contact.phone }}' tabindex="-1">{{ site.data.settings.contact.phone }}</a><br>
+         </p>
+
+         <p>Email: <a href='mailto:{{ site.data.settings.email }}' tabindex="-1">{{ site.data.settings.email }}</a></p>
+
+         <p>Store Hours: Mon - Sat 9am to 6pm<br>
+            Closed on Sunday and most holidays
+         </p>
+
+         <a class='see-map' href='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15733.874039154283!2d123.856017!3d9.6409487!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbb1bf78ca4571b87!2sRhizz+Travel+and+Tours!5e0!3m2!1sen!2sph!4v1490399917167' target='_blank' tabindex="-1">Click here to see our location on google maps</a>
+
+      </div>
+   </fieldset>
+
+   <fieldset>
+      <h4>Checkout Summary</h4>
+      <label class='copies'>
+         <span>Copies</span>
+         <select name='copies' id='copy' data-amount='350' data-del-amount='0' tabindex="-1">
+            <option value='01'>1</option>
+            <option value='02'>2</option>
+            <option value='03'>3</option>
+            <option value='04'>4</option>
+            <option value='05'>5</option>
+            <option value='06'>6</option>
+            <option value='07'>7</option>
+            <option value='08'>8</option>
+            <option value='09'>9</option>
+            <option value='10'>10</option>
+            <option value='11'>11</option>
+            <option value='12'>12</option>
+         </select>
+      </label>
+      <label name='cost' class='amount'>
+         <span>Amount</span>
+         <input type='text' name='amount' value='P 350' tabindex="-1" readonly>
+      </label>
+      <label name='delivery-amount' class='delivery-amount'>
+         <span>Delivery</span>
+         <input type='text' name='del-amount' value='P 0' tabindex="-1" readonly>
+      </label>
+      <label name='total-cost' class='t-amount'>
+         <span>Total Amount</span>
+         <input type='text' name='t-amount' value='P 350' tabindex="-1" readonly>
+      </label>
+      <span class='note stronger'>Please pay your amount in full</span>
+   </fieldset>
+
+   <fieldset class='cta-submit'>
+      <input type='submit' value='submit' tabindex="-1">
+   </fieldset>   
+</div>

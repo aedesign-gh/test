@@ -1,0 +1,306 @@
+---
+layout: page
+title: 2go Form
+accommodation-img: true
+accommodation:
+ - name: 'Suite Room'
+   img: 'suite-room.jpg'
+ - name: 'State Room'
+   img: 'state-room.jpg'
+ - name: 'Cabin Class'
+   img: 'cabin-class.jpg'
+ - name: 'Tourist Class'
+   img: 'tourist-class.jpg'
+ - name: 'Mega/Super Value'
+   img: 'mega-super-value.jpg'
+amenities:
+ - name: reception
+   img: amenities1.jpg
+ - name: sea breeze
+   img: amenities2.jpg
+ - name: island fiesta
+   img: amenities3.jpg
+ - name: karockoke
+   img: amenities4.jpg
+ - name: trip & trim salon
+   img: amenities5.jpg
+ - name: spa oceania
+   img: amenities6.jpg
+ - name: quick mart
+   img: amenities7.jpg
+ - name: horizon cafe
+   img: amenities8.jpg
+meta: '2go travel online booking, book ticket with Rhizz Tours and Travel, affordable price booking 2go travel with Rhizz Tours and Travel'
+---
+<section class='form_tick main'>
+   <h2>{{ page.title }} Form</h2>
+   
+   <section class='form-container'>
+      <form class='form' method='POST' action='https://formspree.io/{{site.data.settings.email}}'>
+         
+         <input name='ship' value='{{ page.title }}' style='display: none'>
+         
+         <div class='passenger-details'>
+            <fieldset class='passenger-name'>
+               <h4>Passenger 1</h4>
+               <label class='fname'>
+                  <span>First Name</span>
+                  <input type='name' name='passenger1-firstname' onkeydown="if((event.keyCode>47&&event.keyCode<58)||(event.keyCode>95&&event.keyCode<106))return false">
+               </label>   
+               <label class='mname'>
+                  <span>Middle Name</span>
+                  <input type='name' name='passenger1-middlename' class='required'  onkeydown="if((event.keyCode>47&&event.keyCode<58)||(event.keyCode>95&&event.keyCode<106))return false">
+               </label>
+               <label class='lname'>
+                  <span>Last Name</span>
+                  <input type='name' name='passenger1-lastname' class='required' onkeydown="if((event.keyCode>47&&event.keyCode<58)||(event.keyCode>95&&event.keyCode<106))return false">
+               </label>         
+               <label class='age'>
+                  <span>Age</span>
+                  <input type='number' name='passenger1-age' class='required'>
+               </label>
+            </fieldset>  
+            <fieldset class='passenger-name'>
+               <h4>Passenger 2</h4>
+               <label class='fname'>
+                  <span>First Name</span>
+                  <input type='name' name='passenger2-firstname' onkeydown="if((event.keyCode>47&&event.keyCode<58)||(event.keyCode>95&&event.keyCode<106))return false">
+               </label>            
+               <label class='mname'>
+                  <span>Middle Name</span>
+                  <input type='name' name='passenger2-middlename' onkeydown="if((event.keyCode>47&&event.keyCode<58)||(event.keyCode>95&&event.keyCode<106))return false">
+               </label>
+               <label class='lname'>
+                  <span>Last Name</span>
+                  <input type='name' name='passenger2-lastname' onkeydown="if((event.keyCode>47&&event.keyCode<58)||(event.keyCode>95&&event.keyCode<106))return false">
+               </label>
+               <label class='age'>
+                  <span>Age</span>
+                  <input type='number' name='passenger2-age'>
+               </label>
+            </fieldset>  
+            <fieldset class='others-details'> 
+               <h4>Other Details</h4>
+               <label class='origin'>
+                  <span>Origin/ Itinerary</span>
+                  <input type='text' name='origin' placeholder='Bohol - Manila' class='required'>
+               </label>
+               <label class='accomm'>
+                  <span>Accommodation</span>
+                  <select id='accomm' name='accommodation' class='required'>
+                     <option value='--' disabled selected>--</option>
+                     {% for item in page.accommodation %}
+                     <option value='{{ item.name }}'>{{ item.name }}</option>
+                     {% endfor %}
+                  </select>                  
+               </label>  
+            </fieldset>
+            <fieldset class='time depart'>
+               <h4>Date and Time of Departure</h4>
+               <label class='month'>
+                  <span>Month</span>
+                  <select id='d-month' name='departure-month' class='required'>
+                     <option value='--' disabled selected>--</option>
+                     <option value='january'>January</option>
+                     <option value='febuary'>Febuary</option>
+                     <option value='march'>March</option>
+                     <option value='april'>April</option>
+                     <option value='may'>May</option>
+                     <option value='june'>June</option>
+                     <option value='july'>July</option>
+                     <option value='august'>August</option>
+                     <option value='september'>September</option>
+                     <option value='october'>October</option>
+                     <option value='november'>November</option>
+                     <option value='december'>December</option>
+                  </select>
+               </label>
+               <label class='day'>
+                  <span>Day</span>
+                  <select id='d-day' name='departure-day' class='required'>
+                     <option value='--' disabled selected>--</option>
+                     <option value='01'>1</option>
+                     <option value='02'>2</option>
+                     <option value='03'>3</option>
+                     <option value='04'>4</option>
+                     <option value='05'>5</option>
+                     <option value='06'>6</option>
+                     <option value='07'>7</option>
+                     <option value='08'>8</option>
+                     <option value='09'>9</option>
+                     <option value='10'>10</option>
+                     <option value='11'>11</option>
+                     <option value='12'>12</option>
+                     <option value='13'>13</option>
+                     <option value='14'>14</option>
+                     <option value='15'>15</option>
+                     <option value='16'>16</option>
+                     <option value='17'>17</option>
+                     <option value='18'>18</option>
+                     <option value='19'>19</option>
+                     <option value='20'>20</option>
+                     <option value='21'>21</option>
+                     <option value='22'>22</option>
+                     <option value='23'>23</option>
+                     <option value='24'>24</option>
+                     <option value='25'>25</option>
+                     <option value='26'>26</option>
+                     <option value='27'>27</option>
+                     <option value='28'>28</option>
+                     <option value='29'>29</option>
+                     <option value='30'>30</option>
+                     <option value='31'>31</option>
+                     <option value='33'>32</option>
+                  </select>                  
+               </label>
+               <label class='year'>
+                  <span>Year</span>
+                  <select id='d-year' name='departure-year' class='required'>
+                     <option value='--' disabled selected>--</option>
+                     <option value='2017'>2017</option>
+                     <option value='2018'>2018</option>
+                     <option value='2019'>2019</option>
+                     <option value='2020'>2020</option>
+                  </select>
+               </label>
+               <label class='hour'>
+                  <span>Hour</span>
+                  <input type='text' name='departure-hour' class='required' placeholder='08:00 am'>
+               </label>
+            </fieldset>
+            <fieldset class='time return'>               
+               <h4>Date and Time of Return</h4>
+               <label class='month'>
+                  <span>Month</span>
+                  <select id='r-month' name='return-month'>
+                     <option value='--' disabled selected>--</option>
+                     <option value='january'>January</option>
+                     <option value='febuary'>Febuary</option>
+                     <option value='march'>March</option>
+                     <option value='april'>April</option>
+                     <option value='may'>May</option>
+                     <option value='june'>June</option>
+                     <option value='july'>July</option>
+                     <option value='august'>August</option>
+                     <option value='september'>September</option>
+                     <option value='october'>October</option>
+                     <option value='november'>November</option>
+                     <option value='december'>December</option>
+                  </select>
+               </label>
+               <label class='day'>
+                  <span>Day</span>
+                  <select id='r-day' name='return-day'>
+                     <option value='--' disabled selected>--</option>
+                     <option value='01'>1</option>
+                     <option value='02'>2</option>
+                     <option value='03'>3</option>
+                     <option value='04'>4</option>
+                     <option value='05'>5</option>
+                     <option value='06'>6</option>
+                     <option value='07'>7</option>
+                     <option value='08'>8</option>
+                     <option value='09'>9</option>
+                     <option value='10'>10</option>
+                     <option value='11'>11</option>
+                     <option value='12'>12</option>
+                     <option value='13'>13</option>
+                     <option value='14'>14</option>
+                     <option value='15'>15</option>
+                     <option value='16'>16</option>
+                     <option value='17'>17</option>
+                     <option value='18'>18</option>
+                     <option value='19'>19</option>
+                     <option value='20'>20</option>
+                     <option value='21'>21</option>
+                     <option value='22'>22</option>
+                     <option value='23'>23</option>
+                     <option value='24'>24</option>
+                     <option value='25'>25</option>
+                     <option value='26'>26</option>
+                     <option value='27'>27</option>
+                     <option value='28'>28</option>
+                     <option value='29'>29</option>
+                     <option value='30'>30</option>
+                     <option value='31'>31</option>
+                     <option value='33'>32</option>
+                  </select>                  
+               </label>
+               <label class='year'>
+                  <span>Year</span>
+                  <select id='d-year' name='return-year'>
+                     <option value='--' disabled selected>--</option>
+                     <option value='2017'>2017</option>
+                     <option value='2018'>2018</option>
+                     <option value='2019'>2019</option>
+                     <option value='2020'>2020</option>
+                  </select>
+               </label>
+               <label class='hour'>
+                  <span>Hour</span>
+                  <input type='text' name='return-hour' placeholder='02:00 pm'>
+               </label>
+            </fieldset>
+            <fieldset class='cta-submit'>
+               <span class='continue'>Continue</span>
+            </fieldset>  
+         </div>
+         
+         
+         <div class='other-details'>            
+            <div class='requestor-summary'>
+               <fieldset>
+                  <h4>Order Summary</h4>
+                  <div>
+                     <span>Ship</span>
+                     <span id='type'>{{ page.title }}</span>
+                  </div>
+
+                  <div>
+                     <span>Passenger 1 Name</span>
+                     <span id='pass1'></span>
+                  </div>
+
+                  <div>
+                     <span>Passenger 2 Name</span>
+                     <span id='pass2'></span>
+                  </div>
+
+                  <div>
+                     <span>Origin</span>
+                     <span id='origin'></span>
+                  </div>
+                  
+                  <div>
+                     <span>Accommodation</span>
+                     <span id='accommodation'></span>
+                  </div>
+                  
+                  <div>
+                     <span>Date of Departure</span>
+                     <span id='depart'></span>
+                  </div>
+                  
+                  <div>
+                     <span>Date of Return</span>
+                     <span id='return'></span>
+                  </div>
+                  
+               </fieldset>
+               <fieldset class='edit'>
+                  <span class='edit-btn'>edit</span>
+               </fieldset>
+            </div>            
+            <div class='contact-details'>
+               
+               {% include ticketing/contact.html %}
+
+               <fieldset class='cta-submit'>
+                  <input type='submit' value='submit' tabindex="-1">
+               </fieldset>   
+            </div>
+         </div>   
+         
+      </form>         
+   </section> 
+</section>

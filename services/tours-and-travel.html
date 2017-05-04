@@ -1,0 +1,24 @@
+---
+layout: page
+title: Tours and Travel
+blurb: 'Travel and Witness philippines beautiful tourist spots with our Rhizz Travels and Tours'
+category: services
+cta: see all packages
+img: services/tours-and-travel/tours-and-travel.png
+meta: 'We offer affordable tours & vacation packages ranging from local, asian & other international destinations of choice. Make us your travel assistance agent today!. Tour Packages around Philippines, Cebu, Bohol, Palawan, Oslob & Baguio'
+---
+
+<section class='tours-and-travel main'>
+   <h2 class='title'>{{ page.title }}</h2>
+   <section class='tours-and-travel-articles'>    
+      {% for post in site.tours-and-travel limit:limit-post %}
+      <article class='article'>
+         <figure class='img'>
+            <img src='{{ site.baseurl }}/assets/img/services/{{ post.category }}/{{ post.title | downcase }}/{{ post.img }}' alt='{{ page.title }} {{ site.data.settings.title }}'>
+         </figure>
+         <h4>{{ post.title | capitalize }} Tour</h4>  
+         <a class='see-more' href='{{ site.baseurl }}{{ post.url }}'>view full service</a>
+      </article>
+      {% endfor %}
+   </section> 
+</section>

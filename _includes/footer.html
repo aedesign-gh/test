@@ -1,0 +1,108 @@
+<footer id='footer'>
+   <section class='footer-container'>
+      <div class='find-tour'>
+         <h3>Find your perfect tour to Bohol</h3><a class='cta' href='{{ site.baseurl }}/services'>search all tours</a>
+      </div>
+      
+      <div class='partnership'>
+         <a class='phil-air' href='https://www.philippineairlines.com/en/ph/home' target='_blank'>
+            <img src='{{ site.baseurl }}/assets/img/partners/phil-air.png' alt='{{ site.data.settings.title }}'>
+            <img src='{{ site.baseurl }}/assets/img/partners/phil-air-gray.png' alt='{{ site.data.settings.title }}'>
+         </a>
+         <a class='air-asia' href='http://www.airasia.com/ph/en/home.page' target='_blank'>
+            <img src='{{ site.baseurl }}/assets/img/partners/air-asia.png' alt='{{ site.data.settings.title }}'>
+            <img src='{{ site.baseurl }}/assets/img/partners/air-asia-gray.png' alt='{{ site.data.settings.title }}'>
+         </a>
+         <a class='cebu-pac' href='https://www.cebupacificair.com/' target='_blank'>
+            <img src='{{ site.baseurl }}/assets/img/partners/cebu-pacific.png' alt='{{ site.data.settings.title }}'>
+            <img src='{{ site.baseurl }}/assets/img/partners/cebu-pacific-gray.png' alt='{{ site.data.settings.title }}'>
+         </a>
+         <a class='dot' href='http://www.tourism.gov.ph/pages/default.aspx' target='_blank'>
+            <img src='{{ site.baseurl }}/assets/img/partners/dot.png' alt='{{ site.data.settings.title }}'>
+            <img src='{{ site.baseurl }}/assets/img/partners/dot-gray.png' alt='{{ site.data.settings.title }}'>
+         </a>
+         <a class='morefuninphil' href='http://itsmorefuninthephilippines.com/' target='_blank'>
+            <img src='{{ site.baseurl }}/assets/img/partners/morefuninphil.png' alt='{{ site.data.settings.title }}'>
+            <img src='{{ site.baseurl }}/assets/img/partners/morefuninphil-gray.png' alt='{{ site.data.settings.title }}'>
+         </a>
+      </div>
+      
+      <hr class='separator'>
+   
+      <div class='footer-post'>
+         <div class='services'>
+            <h4 class='title'>services</h4>
+            <div class='col-flex'>
+               <div class='col-item'>
+                  <ul>
+                     <span>Ticketing</span>
+                     {% for ticket in site.ticketing %}
+                     <li><a href='{{ site.baseurl }}{{ ticket.url }}'>{{ ticket.title | capitalize}} {% if ticket.subtitle %}{{ ticket.subtitle | capitalize }}{% endif %}</a></li>
+                     {% endfor %}
+                  </ul>
+                  <ul>
+                     <span>NSO Processing</span>
+                     {% for item in site.pages %}
+                     {% if item.category == 'NSO form' %}
+                     <li><a href='{{ site.baseurl }}{{ item.url }}'>{{ item.title }}</a></li>
+                     {% endif %}
+                     {% endfor %}
+                  </ul>
+               </div>
+               <div class='col-item'>
+                  <ul>
+                     <span>Tour Packages</span>
+                     {% for tour in site.tours-and-travel %}
+                     <li><a href='{{ site.baseurl }}{{ tour.url }}'>{{ tour.title | capitalize }} Tour</a></li>
+                     {% endfor %}
+                  </ul>
+                  <ul>
+                     <span>Vehicles Rental</span>
+                     {% for vehicle in site.vehicles-for-rent %}
+                     <li><a href='{{ site.baseurl }}{{ vehicle.url }}'>{{ vehicle.brand | capitalize }} - {{ vehicle.model | capitalize }}</a></li>
+                     {% endfor %}
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class='office-hour'>
+            <h4 class='title'>office hour</h4>
+            <ul>
+               <li>Monday 8am - 6pm</li>
+               <li>Tuesday 8am - 6pm</li>
+               <li>Wednesday 8am - 6pm</li>
+               <li>Thursday 8am - 6pm</li>
+               <li>Friday 8am - 6pm</li>
+               <li>Saturday 8am - 6pm</li>
+            </ul>
+         </div>
+         <div class='contact'>
+            <h4 class='title'>contact us</h4>     
+            <ul>
+               <li>Globe: <a href='tel:{{ site.data.settings.contact.globe }}'>{{ site.data.settings.contact.globe }}</a></li>
+               <li>Smart: <a href='tel:{{ site.data.settings.contact.smart }}'>{{ site.data.settings.contact.smart }}</a></li>
+               <li>Sun: <a href='tel:{{ site.data.settings.contact.sun }}'>{{ site.data.settings.contact.sun }}</a></li>
+               <li>Phone: <a href='tel:{{ site.data.settings.contact.phone }}'>{{ site.data.settings.contact.phone }}</a></li>
+               <li>Duo: <a href='tel:{{ site.data.settings.contact.duo }}'>{{ site.data.settings.contact.duo }}</a></li>
+            </ul>
+            <p>Email: <a href='mailto:{{ site.data.settings.email }}'>{{ site.data.settings.email }}</a></p>  
+         </div>
+         <div class='address'>
+            <h4 class='title'>address</h4>
+            <p>
+               Mezzanine Floor<br>
+               Rose BLDG., CPG Ave., <br>
+               Tagbilaran City, 6300 <br>
+               Bohol, Philippines
+            </p>  
+         </div>
+      </div>
+      
+      <p class='copyright'>© Copyright 2017 <a href='/'>Rhizz Tours & Travel</a>. Designed by <a href='/'>AEDesign</a></p>
+   </section>
+</footer>
+
+<script src='{{site.baseurl}}/assets/js/jquery-3.1.1.min.js'></script>
+<script src='{{site.baseurl}}/assets/js/functions.js'></script>
+</body>   
+</html>

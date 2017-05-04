@@ -1,0 +1,43 @@
+# Site Settings
+lang: 'en'
+author: 'Germán Fuentes Capella'
+title: 'Rhizz Tour and Travels'
+subtitle: ''
+meta: 
+ description: 'description can be changed in _data/settings.meta.description'
+ keywords: 'keywords can be changed in _data/settings.meta.keywords'
+
+# Site Content
+email: 'aedesignbohol@gmail.com'
+contact: 
+ smart: '+63 939 905 8135'
+ sun: '+63 925 575 7118'
+ globe: '+63 917 540 0940'
+ duo: '510-7490'
+ phone: '(038) 501-9879'
+ 
+permits:
+- {name: 'Mayor Permit', img: 'legal2.jpg'}
+- {name: 'Certificate of Registration', img: 'legal1.jpg'}
+- {name: 'BIR ', img: 'legal3.jpg'}
+ 
+socials:
+- {name: facebook, link: 'https://www.facebook.com/rhizztoursandtravel/', svg: 'fb.html'}
+- {name: twitter, link: 'https://twitter.com/rhizztravel2012', svg: 'twit.html'}
+- {name: instagram, link: 'https://www.instagram.com/rhizztravel2012/', svg: 'insta.html'}
+
+advantages:
+- {name: trusted since 2012, desc: 'Since 2012, we have served our customers valuable time as to see and experience the beautiful sights in bohol.', img: 'time.html'}
+- {name: safe and secure, desc: 'Since 2012, we have assisted hundreds of satisfied and happy clients in planning their perfect vacations and the safety of our travelers is our top priority.', img: 'safe.html'}
+- {name: friendly and knowledgeable staff, desc: 'Our staff members have extensive and firsthand knowledge of the business and are passionate on their job.', img: 'staff.html'}
+- {name: satisfaction guaranteed, desc: 'Our Travel expert planners provide packages and itineraries with the best price in the industry.', img: 'satisfaction.html'}
+- {name: professional tour guides, desc: 'Our first class guides, our guides range from retired professors to museum curators.', img: 'tour-guide.html'}
+- {name: friendly support, desc: 'We promised to address all the concerns that bother you. Notify us and we will glad to assist you.', img: 'support.html'}
+
+menu:
+- {name: 'blog'}
+- {name: 'career'}
+
+about: 'Lorem ipsum dolor s  it amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+
+career: 'Always ready to face new challenges, I had to deal all over my career with quite different projects, from pure consulting, to datawarehousing, web development in Python and Java and now E-commerce.My last discovery, in 2011, was the payment services industry. This market is heavily influenced by the enormous number of players, each one with a different perspective on how systems should communicate, which standards they should follow and which workflows should guide shoppers and merchants through the checkout process.'

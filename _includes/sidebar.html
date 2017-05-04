@@ -1,0 +1,10 @@
+<section class='sidebar'>
+   <h4>legalities and permits</h4>
+   <section class='sidebar-item permits'>
+      {% for permit in site.data.settings.permits %}
+      <figure class='img lightbox-trig {{ permit.name }}'>
+         <img class='lightbox-img' data-title='{{ permit.name }}' src='{{ site.baseurl }}/assets/img/permit/{{ permit.img }}' alt='{{ permit.name }} {{ site.data.settings.title }}'>
+      </figure>
+      {% endfor %}
+   </section>
+</section>

@@ -1,0 +1,59 @@
+---
+layout: page
+title: Birth Certificate
+category: NSO form
+---
+
+<section class='form_cert main'>
+   <h2>{{ page.title }} Application Form</h2>
+   
+   <div class='form-container'>
+      <form class='form form-birth' method='POST' action='https://formspree.io/{{site.data.settings.email}}'>
+         
+         <input name='certificate-type' value='{{ page.title }}' style='display: none'>
+         
+         <div class='requestor-details'>
+            {% include nso/requestor-name.html form-name='Birth Certificate (Maiden name for married women)' %}
+
+            {% include nso/birth-details.html %}
+
+            {% include nso/father-name.html %}
+
+            {% include nso/mother-name.html %}
+
+            {% include nso/purpose.html %}    
+
+            <fieldset class='cta-submit'>
+               <span class='continue'>Continue</span>
+            </fieldset>  
+         </div>
+         
+         <div class='other-details'>            
+            <div class='requestor-summary'>
+               <fieldset>
+                  <h4>Order Summary</h4>
+                  <div>
+                     <span>Type</span>
+                     <span id='type'>{{ page.title }}</span>
+                  </div>
+
+                  <div>
+                     <span>Name on Birth Certificate</span>
+                     <span id='req-name'></span>
+                  </div>
+
+                  {{ b-details }}
+                  {{ fname }}
+                  {{ mname }}
+                  {{ purpose }}
+               </fieldset>
+               <fieldset class='edit'>
+                  <span class='edit-btn'>edit</span>
+               </fieldset>
+            </div>            
+            
+            {% include nso/delivery-details.html %}
+         </div>                
+      </form>
+   </div>
+</section>

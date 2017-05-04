@@ -1,0 +1,18 @@
+<section id='advantage' class='{{include.homeadvantage}}'>
+   <section class='advantage-container'>
+      <h2>Advantages</h2>
+      <div class='wrapper'>
+         {% for adv in site.data.settings.advantages %}
+         <div class='advantage-item-flex'>
+            <figure class='img'>
+               {% include icons/{{ adv.img }} %}
+            </figure>
+            <div class='text'>
+               <h4>{{ adv.name }}</h4>
+               <p class='blurb'>{{ adv.desc }}</p>
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </section>
+</section>

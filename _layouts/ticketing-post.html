@@ -1,0 +1,61 @@
+---
+layout: page
+---
+
+<section class='ticketing-post main'>
+   <h2 class='title'>{{ page.title }}{% if page.subtitle %} - {{ page.subtitle }}{% endif %}</h2>
+   <section class='boat-details'>
+      <figure class='boat lightbox-trig'>
+         <img class='lightbox-img' data-title='{{ page.title }}' src='{{ site.baseurl }}/assets/img/services/ticketing/{{ page.title | downcase }}/{{ page.img-boat }}' alt='{{ page.title }} {{ site.data.settings.title }}'>
+      </figure>
+      <a class='book-now' href='{{ site.baseurl }}{{ page.url }}-form'>book now</a>
+      <div class='accom'>            
+         <h4>accommodation</h4>
+         {% if page.accommodation-img %}
+         <div class='accom_imgs'>
+            {% for accom in page.accommodation %}
+            <div class='accom_item'>
+               <span class='sub-sub-title'>{{ accom.name }}</span>
+               <figure class='img lightbox-trig'>
+                  <img class='lightbox-img' alt='{{ site.data.settings.title }} {{ accom.name }}' data-title='{{ accom.name }}' src='{{ site.baseurl }}/assets/img/services/ticketing/2go/accommodation/{{ accom.img }}' alt='{{ page.title }} {{ site.data.settings.title }}'>
+               </figure>
+            </div>
+            {% endfor %}
+         </div>
+         {% else %}            
+         <div class='accom_text'>
+            {% for accom in page.accommodation %}
+            <strong class='sub-sub-title'>{% include icons/check.html %}{{ accom.name }}</strong>
+            <span class='sub-sub-desc'>{{ accom.desc }}</span>
+            {% endfor %}
+         </div>
+         {% endif %}
+      </div>
+
+      {% if page.amenities %}
+      <h4>amenities</h4>
+      <section class='amenities'>
+         {% for item in page.amenities %}
+         <figure class='img lightbox-trig'>
+            <img class='lightbox-img' src='{{ site.baseurl }}/assets/img/services/ticketing/2go/amenities/{{ item.img }}' alt='{{ page.title }} {{ site.data.settings.title }}'>
+         </figure>
+         {% endfor %}
+      </section>
+      {% endif %}
+
+      {% if page.schedule %}
+      <h4>schedule</h4>
+      <section class='sched'>
+         {% for sched in page.schedule %}
+         <div class='sched-item'>
+            <strong>{{ sched.name }}</strong>
+            {% for time in sched.time %}
+            <span>{{ time }}</span>
+            {% endfor %}
+         </div>      
+         {% endfor %}
+      </section>
+      {% endif %}
+   </section>     
+
+</section>

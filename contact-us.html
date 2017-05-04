@@ -1,0 +1,60 @@
+---
+layout: page
+title: Contact Us
+---
+
+<section class='contact-us main'>
+   <h2 class='title'>Contact Us</h2>
+   <section class='wrapper-text-form'>
+      <div class='text'>
+         <p>Mezzanine Floor<br>
+            Rose BLDG., CPG Ave.,<br>
+            Tagbilaran City, 6300<br>
+            Bohol, Philippines
+         </p>
+         <p>Globe: <a href='tel:{{ site.data.settings.contact.globe }}'>{{ site.data.settings.contact.globe }}</a><br>
+            Smart: <a href='tel:{{ site.data.settings.contact.smart }}'>{{ site.data.settings.contact.smart }}</a><br>
+            Sun: <a href='tel:{{ site.data.settings.contact.sun }}'>{{ site.data.settings.contact.sun }}</a><br>
+            Phone: <a href='tel:{{ site.data.settings.contact.phone }}'>{{ site.data.settings.contact.phone }}</a><br>
+            Duo: <a href='tel:{{ site.data.settings.contact.duo }}'>{{ site.data.settings.contact.duo }}</a><br>
+         </p>
+
+         <p>Email: <a href='mailto:{{ site.data.settings.email }}'>{{ site.data.settings.email }}</a></p>
+
+         {% include social.html %}
+
+         <p>Store Hours: Mon - Sat 9am to 6pm<br>
+            Closed on Sunday and most holidays
+         </p>
+      </div>
+      <div class='form'>
+         <p>Send us your concern</p>
+         <form class='form-contact' method='POST' action='https://formspree.io/{{site.data.settings.email}}'>
+            <fieldset class='name'>
+               <label class='info'>
+                  <span>Name</span>
+                  <input type='text' required>
+               </label>
+               <label class='info'>
+                  <span>Email</span>
+                  <input type='email' required>                  
+               </label>
+            
+               <label class='message'>
+                  <span>Message</span>
+                  <textarea type='message' required></textarea>
+               </label>
+            
+               <label>
+                  <input type='submit' value='submit'>
+               </label>
+            </fieldset>
+         </form>
+      </div>
+   </section>
+
+   <iframe class='map' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15733.874039154283!2d123.856017!3d9.6409487!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbb1bf78ca4571b87!2sRhizz+Travel+and+Tours!5e0!3m2!1sen!2sph!4v1490399917167" frameborder="0" allowfullscreen></iframe>
+
+   <a class='see-map' href='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15733.874039154283!2d123.856017!3d9.6409487!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbb1bf78ca4571b87!2sRhizz+Travel+and+Tours!5e0!3m2!1sen!2sph!4v1490399917167' target='_blank'>Click here to see our location on google maps</a>
+         
+</section>

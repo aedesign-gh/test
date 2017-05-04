@@ -1,0 +1,61 @@
+---
+layout: default 
+---
+
+{% include social-share.html %}
+
+<section id='vehicle'>
+   <section class='vehicle-container'>  
+      <article class='car'>
+         <figure class='car-img'>
+            <img src='{{ site.baseurl }}/assets/img/services/vehicles-for-rent/{{ page.model }}.png' alt='Vehicles for Rent {{ page.title }} {{ site.data.settings.title }}'>
+         </figure>
+         <section class='car-details'>
+            <h2 class='car-name'><span class='model'>{{ page.model }}</span><span class='brand'>{{ page.brand }}</span></h2>
+            <div class='spec-price'>
+               <div class='spec'>
+                  <span>{% include icons/car-color.html %} {{ page.color }}</span>
+                  <span>{% include icons/car-engine.html %} {{ page.engine }}</span>
+                  <span>{% include icons/car-cooling.html %} {{ page.cooling }}</span>
+                  <span>{% include icons/car-seats.html %} {{ page.seats }}</span>
+                  <span class='doors'>{% include icons/car-doors.html %} {{ page.doors }}</span>
+               </div>
+               <h2 class='price'>p {{ page.price }}/ day</h2>
+            </div>            
+         </section>
+      </article>
+      
+      <section class='form-container'>
+         <form class='form' method='POST' action='https://formspree.io/{{site.data.settings.email}}'>
+            <fieldset>
+               <h3>Rent Now</h3>
+               <label>
+                  <span>Car</span>
+                  <input type='text' name='car' value='{{ page.title }}' readonly>
+               </label>
+               <label>
+                  <span>Name</span>
+                  <input type='text' name='name' required>
+               </label>
+               <label>
+                  <span>Email</span>
+                  <input type='email' name='email' required>
+               </label>
+               <label class='message'>
+                  <span>Message</span>
+                  <textarea type='text' name='message' required></textarea>
+               </label>
+            </fieldset>
+            <fieldset class='cta-submit'>
+               <input type='submit' value='send reservation'>
+            </fieldset>
+         </form>
+      </section>    
+   </section>
+</section>
+   
+<section class='vehicle-list-container'>
+   <div class='vehicle-list'>  
+      {% include vehicle-list.html %}
+   </div>
+</section>

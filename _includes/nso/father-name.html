@@ -1,0 +1,25 @@
+ <fieldset class='father-name'>
+   <h4>Name of Father</h4>
+   <span class='note strong'>
+      Father's name is not required for illegitimate applicants. However, if the father's name is present in the birth certificate, please indicate it here.
+   </span>
+   <label>
+      <span>First Name</span>
+      <input name='father-firstname' type='text' class='required' onkeydown="if((event.keyCode>47&&event.keyCode<58)||(event.keyCode>95&&event.keyCode<106))return false">
+   </label>
+   <label>
+      <span>Middle Name</span>
+      <input name='father-middlename' type='text' class='required' onkeydown="if((event.keyCode>47&&event.keyCode<58)||(event.keyCode>95&&event.keyCode<106))return false">
+   </label>
+   <label>
+      <span>Last Name</span>
+      <input name='father-lastname' type='text' class='required' onkeydown="if((event.keyCode>47&&event.keyCode<58)||(event.keyCode>95&&event.keyCode<106))return false">
+   </label>
+</fieldset>
+
+{% capture fname %}
+<div>
+   <span>Father Name</span>
+   <span id='f-name'></span>
+</div>    
+{% endcapture %}

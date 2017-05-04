@@ -1,0 +1,8 @@
+<section class='hero{% if page.title %} hero-page{% endif %} {{include.homehero}}'>
+   <section class='hero-container'>
+      <img src='{{ site.baseurl }}/assets/img/site-logo.png' alt='{{ page.title }} {{ site.data.settings.title }}'>
+      <h1>{{ site.data.settings.title }}</h1>
+      <p>The Bohol Forest is a man-made mahogany forest stretching in a two-kilometer stretch of densely planted Mahogany trees located in the border of Loboc and Bilar towns. Before and after this man-made forest are the naturally grown forests of Loboc and Bilar which are thick with.</p>
+      {% include social.html %}
+   </section>
+</section>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='{{ site.data.settings.lang }}'>
+<head>
+   <title>{% if page.exclude %}{{ page.title }}{% else %}{{ page.title }} · {% if page.category == 'services' %}{{ page.category | capitalize }} · {% elsif page.category == 'ticketing' %}{{ page.category | capitalize }} · Services · {% endif %}{{ site.data.settings.title }}{% endif %}</title>
+   <meta charset='utf-8'>
+   <meta name='description' content='{{ page.title }}'>
+   <meta name='keywords' content='{{ page.meta }}'>
+   <meta name='author' content='{{site.data.settings.author}}'>
+   <meta name='dcterms.rightHolder' content='{{site.url}}'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <link rel='cannonical' href="{{site.url}}{{page.url | replace: 'index.html' , ''}}">
+   <link rel='stylesheet' href='{{site.baseurl}}/assets/css/main.css' type='text/css'>
+   <!--<link href="https://fonts.googleapis.com/css?family=Khand:300,400,500" rel="stylesheet">-->
+   <link rel='shortcut icon' href='{{site.baseurl}}/favicon.ico'>   
+</head>
+<body id='main'>
+<header id='header'>
+   <section class='header-container'>
+      <a class='site-brand' href='{{ site.baseurl }}/'>
+         <img src='{{ site.baseurl }}/assets/img/site-logo-large.png' alt='{{ site.data.settings.title }} Logo'>
+      </a>
+      <section class='text'>
+         <div class='contact'>
+            <span class='email'>email: <a href='mailto:{{ site.data.settings.email }}'>{{ site.data.settings.email }}</a></span>
+            <span class='phone'>phone no.: <a href='tel:{{ site.data.settings.contact.phone }}'>{{ site.data.settings.contact.phone }}</a></span>
+            <span class='globe'>globe no.: <a href='tel:{{ site.data.settings.contact.globe }}'>{{ site.data.settings.contact.globe }}</a></span>
+            <span class='smart'>smart no.: <a href='tel:{{ site.data.settings.contact.smart }}'>{{ site.data.settings.contact.smart }}</a></span>
+         </div>
+         <nav class='nav'>
+            <ul class='nav-menu'>
+               <li class='nav-item home'>
+                  <a class='{% if page.url == "/" %}current{% endif %}' href='{{ site.url }}{{ site.baseurl }}'>home</a>
+               </li>
+               <li class='nav-item services'>
+                  <a class='services {% if page.url contains "services" %}current{% endif %}' href='{{ site.baseurl }}/services'>services</a>
+                  <ul>
+                     <li><a href='{{ site.baseurl }}/services/ticketing'>Ticketing</a></li>
+                     <li><a href='{{ site.baseurl }}/services/nso'>NSO Certification</a></li>
+                     <li><a href='{{ site.baseurl }}/services/tours-and-travel'>Tour and Travel</a></li>
+                     <li><a href='{{ site.baseurl }}/services/vehicles-for-rent/'>Car Rental</a></li>
+                  </ul>
+               </li>
+               <li class='nav-item'>
+                  <a class='{% if page.url contains "about" %}current{% endif %}' href='{{ site.baseurl }}/about'>about</a>
+               </li>
+               <li class='nav-item'>
+                  <a class='{% if page.url contains "payment" %}current{% endif %}' href='{{ site.baseurl }}/payment'>payment</a>
+               </li>
+               <li class='nav-item'>
+                  <a class='{% if page.url contains "contact" %}current{% endif %}' href='{{ site.baseurl }}/contact-us'>contact us</a>
+               </li>
+            </ul>
+         </nav>
+      </section>
+   </section>
+</header>

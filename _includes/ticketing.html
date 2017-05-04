@@ -1,0 +1,20 @@
+<section class='ticketing-articles'>         
+   {% for post in site.ticketing %}
+   <article class='article {{ post.class-name }}'>
+      <h4><span>{{ post.title }}</span></h4>
+      <figure class='img'>
+         <img src='{{ site.baseurl }}/assets/img/services/ticketing/{{ post.title | downcase }}/{{ post.title | downcase }}.png' alt='{{ page.title }} {{ site.data.settings.title }}'>
+      </figure>
+      <strong>Accommodation</strong>
+      <p class='accom'>{% for accom in post.accommodation limit:3 %}<span>{{ accom.name }}</span>{% endfor %}</p>
+      {% if post.schedule %}
+      <strong>Route</strong>
+      <p class='route'>{% for sched in post.schedule limit:4 %}<span>{{ sched.short-name }}</span>{% endfor %}</p>
+      {% else %}
+      <strong>Amenities</strong>
+      <p class='ameni'>{% for ameni in post.amenities limit:6 %}<span>{{ ameni.name }}</span>{% endfor %}</p>
+      {% endif %}
+      <a class='see-more' href='{{ site.baseurl }}{{ post.url }}'>see more</a>            
+   </article>   
+   {% endfor %} 
+</section>

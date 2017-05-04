@@ -1,0 +1,100 @@
+---
+layout: default
+title: Rhizz Tours and Travel
+meta: 'Rhizz Tours and Travel has affordable ticketing booking, oceanjet online booking, supercat online booking, 2go travel online booking, NSO online registration, rent a car & tour packages all over the philippines'
+exclude: true
+---
+
+<section id='slider'>
+   <section class='slide-container'>
+      <div class='slide-item active-slide' style='background-image: url("assets/img/slider/slide1.jpg")'>
+         <div class='slide-wrapper'>
+            <div class='text'>
+               <h1 class='big-title'>Ticketing</h1>
+               <div class='sub-items'>
+                     <span class='svg' href='/'>{% include icons/check.html %}2go travel</span>
+                     <span class='svg' href='/'>{% include icons/check.html %}Oceanjet</span>
+                     <span class='svg' href='/'>{% include icons/check.html %}Supercat</span>
+               </div>
+               <a href='{{ site.baseurl }}/services/ticketing/' class='cta'>see schedule</a>
+            </div>
+         </div>
+      </div>
+      <div class='slide-item' style='background-image: url("assets/img/slider/slide2.jpg")'>
+         <div class='slide-wrapper'>
+            <div class='text'>
+               <h1 class='big-title'>NSO/PSA CERTIFICATES</h1>
+               <div class='sub-items'>
+                  <span class='svg' href='/'>{% include icons/check.html %}birth</span>
+                  <span class='svg' href='/'>{% include icons/check.html %}mirrage</span>
+                  <span class='svg' href='/'>{% include icons/check.html %}death</span>
+                  <span class='svg' href='/'>{% include icons/check.html %}cenomar</span>
+               </div>
+               <a href='{{ site.baseurl }}/services/nso' class='cta'>apply now</a>
+            </div>
+         </div>
+      </div>
+      <div class='slide-item' style='background-image: url("assets/img/slider/slide3.jpg")'>
+         <div class='slide-wrapper'>
+            <div class='text'>
+               <h1 class='big-title'>Tour and Travels</h1>
+               <div class='sub-items'>
+                  <span class='svg' href='/'>{% include icons/check.html %}baguio tour</span>
+                  <span class='svg' href='/'>{% include icons/check.html %}bohol tour</span>
+                  <span class='svg' href='/'>{% include icons/check.html %}oslob tour</span>
+                  <span class='svg' href='/'>{% include icons/check.html %}palawan tour</span>
+               </div>
+               <a class='cta' hrref='{{ site.baseurl }}/services/tours-and-travel/'>see more</a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class='thumb-container'>
+      <a class='thumb-item active-thumb'>
+      </a>  
+      <a class='thumb-item'>
+      </a>
+      <a class='thumb-item'>
+      </a>
+   </section>   
+   <div class='ctrl-prev'>
+   </div>
+   <div class='ctrl-next'>
+   </div>   
+</section>
+
+<section id='ticketing' class='ticketing-animate'>
+   <section class='ticketing-container'>
+      <h2>Find out where we can take you! Book with us now!!</h2>
+      {% include ticketing.html %}
+   </section>
+</section>
+
+{% include hero.html homehero='homepage-hero hero-animate' %}
+
+<section id='services' class='services-animate'>
+   <section class='services-container'>
+      <div class='sec-title'>
+         <h2>Have you tried our other services?</h2>
+         <p>We're known for our Tours and Travel, NSO Online Registration, Passport Registration and Vehicles Rental!</p>
+      </div>
+      <section class='article-wrapper'>
+         {% for post in site.pages %}
+         {% if post.title != 'Ticketing' %}
+         {% if post.category == 'services' %}
+         <article class='article'>
+            <figure class='img'>
+               <img src='assets/img/{{ post.img }}' alt='{{ page.title }} {{ site.data.settings.title }}'>
+            </figure>
+            <h4>{{ post.title }}</h4>
+            <p class='blurb'>{{ post.blurb }}</p>
+            <a class='see-more' href='{{ site.baseurl }}{{ post.url }}'>{{ post.cta }}</a>        
+         </article>
+         {% endif %}
+         {% endif %}
+         {% endfor %}
+      </section>
+   </section>
+</section>
+
+{% include advantage.html homeadvantage='advantage-animate' %}

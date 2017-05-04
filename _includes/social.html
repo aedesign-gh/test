@@ -1,0 +1,5 @@
+<section class='social'>
+   {% for social in site.data.settings.socials %}
+   <a class='social-item' href='{{ social.link }}' target='_blank'>{% include icons/{{social.svg}} %}</a>
+   {% endfor %}
+</section>

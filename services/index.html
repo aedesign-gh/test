@@ -1,0 +1,22 @@
+---
+layout: page
+title: Services
+---
+
+<section class='services main'>
+   <h2 class='title'>Services</h2>
+   <section class='article-wrapper'>
+      {% for post in site.pages %}  
+      {% if post.category == 'services' %}
+      <article class='article'>
+         <figure class='img'>
+            <img src='{{ site.baseurl }}/assets/img/{{ post.img }}' alt='{{ page.title }} {{ site.data.settings.title }}'>
+         </figure>
+         <h4>{{ post.title }}</h4>
+         <p class='text'>{{ post.blurb }}</p>
+         <a class='see-more' href='{{ site.baseurl }}{{ post.url }}'>{{ post.cta }}</a>        
+      </article>
+      {% endif %}
+      {% endfor %}
+   </section>   
+</section>

@@ -1,0 +1,14 @@
+{% for car in site.vehicles-for-rent %}
+{% if car.url != page.url %}         
+<section class='vehicle'>
+   <h3 class='vehicle-name'>{{ car.model }} - <span>{{ car.brand }}</span></h3>
+   <figure class='img'>
+      <img src='{{ site.baseurl }}/assets/img/services/vehicles-for-rent/{{ car.model }}.png' alt='{{ page.title }} {{ site.data.settings.title }}'>
+   </figure>
+   <div class='cta-container'>
+      <a class='cta' href='{{ site.baseurl }}{{ car.url }}'>see car details</a><!--
+      remove space between a and span tag--><span class='price'>P {{ car.price }}/ DAY</span>
+   </div>
+</section>
+{% endif %}
+{% endfor %}
