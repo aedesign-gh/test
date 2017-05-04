@@ -34,5 +34,5 @@ amenities:
    img: amenities7.jpg
  - name: horizon cafe
    img: amenities8.jpg
-meta: '2go travel online booking, book ticket with Rhizz Tours and Travel, affordable price booking 2go travel with Rhizz Tours and Travel'
+meta: '2go travel online booking, book ticket with Rhizz Tours and Travel, affordable price booking 2go travel with Rhizz Tours and Travel, booking tickets, affordable ticket online, bohol ticketing outlets, 2go travel online ticketing, 2go travel express, 2go travel express tickets, 2go travel ticket outlets'
 ---

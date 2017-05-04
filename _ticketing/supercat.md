@@ -60,4 +60,5 @@ schedule:
     - 05:15 am
     - 11:00 pm
     - 05:00 pm
+meta: 'supercat online booking, book ticket with Rhizz Tours and Travel, affordable price booking supercat with Rhizz Tours and Travel, booking tickets, affordable ticket online, bohol ticketing outlets, supercat online ticketing, supercat express, supercat express tickets, supercat ticket outlets'
 ---

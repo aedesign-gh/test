@@ -199,4 +199,5 @@ schedule:
     - 02:15 pm
     - 03:45 pm
     - 05:15 pm
+meta: 'oceanjet online booking, book ticket with Rhizz Tours and Travel, affordable price booking oceanjet with Rhizz Tours and Travel, booking tickets, affordable ticket online, bohol ticketing outlets, oceanjet online ticketing, oceanjet express, oceanjet express tickets, oceanjet ticket outlets'
 ---

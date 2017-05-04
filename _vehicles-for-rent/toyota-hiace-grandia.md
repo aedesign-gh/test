@@ -11,4 +11,5 @@ doors: 4 doors
 category: vehicles-for-rent
 priority: 0.7
 changefreq: weekly
+meta: 'Rhizz tours and travel Car & Van & Motorcycle for Rent Toyota Hiace Grandia & Color of White & Transmission is 5-speed Manual, van for rent, van in bohol, car for rent, car in bohol, motorcycle for rent, motorcycle in bohol, rent vehicles in bohol, vehicles for rent'
 ---
