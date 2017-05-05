@@ -255,7 +255,7 @@ function ticketingForm() {
       $('.time.return').find('.'+routeVv).addClass('active-sched');
    })
    
-   $('.cta-submit .continue').click( function() {
+   $('.passenger-details .cta-submit .continue').click( function() {
       
       var cust1Lname = $("[name='passenger1-lastname']").val(),
           cust1Fname = $("[name='passenger1-firstname']").val(),
